@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Ball : MonoBehaviour, IThrowable
@@ -9,6 +8,9 @@ public class Ball : MonoBehaviour, IThrowable
     private SpriteMask forceSpriteMask;
 
     [SerializeField] private Rigidbody _rb;
+    [SerializeField] private AudioSource _source;
+    [SerializeField] private AudioClip[] _clips;
+    [SerializeField] private GameObject _poofPrefab;
     private bool _isGhost;
 
     private void Awake()
@@ -20,6 +22,14 @@ public class Ball : MonoBehaviour, IThrowable
     {
         _isGhost = isGhost;
         _rb.AddForce(velocity, ForceMode.Impulse);
+    }
+    
+    public void OnCollisionEnter(Collision col)
+    {
+        if (_isGhost) return;
+        Instantiate(_poofPrefab, col.contacts[0].point, Quaternion.Euler(col.contacts[0].normal));
+        _source.clip = _clips[Random.Range(0, _clips.Length)];
+        _source.Play();
     }
 
     // Just launches in the direction of your POV.
@@ -40,13 +50,4 @@ public class Ball : MonoBehaviour, IThrowable
     {
         forceSpriteMask.alphaCutoff = 1;
     }
-    
-    // TODO: Add missing AudioSource, AudioClip[], GameObject refs
-    // public void OnCollisionEnter(Collision col)
-    // {
-    //     if (_isGhost) return;
-    //     Instantiate(_poofPrefab, col.contacts[0].point, Quaternion.Euler(col.contacts[0].normal));
-    //     _source.clip = _clips[Random.Range(0, _clips.Length)];
-    //     _source.Play();
-    // }
 }

@@ -155,6 +155,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   _rb: {fileID: 2156088222425844109}
+  _source: {fileID: 6762448618453932208}
+  _clips:
+  - {fileID: 8300000, guid: 7e92adcd12ea05e41a42b5673e643d65, type: 3}
+  - {fileID: 8300000, guid: 3dbb4e1e4715b01478faa8448e2f3cbc, type: 3}
+  - {fileID: 8300000, guid: a8c7300b0127a24479f97555381835d4, type: 3}
+  - {fileID: 8300000, guid: d9488fe13d5a67e439ae853c8958da42, type: 3}
+  - {fileID: 8300000, guid: b71bfaac926af7d4e8747ac2489bc2a8, type: 3}
+  - {fileID: 8300000, guid: afa0a8db0c3c03a4c9c28f4c8fbffb9a, type: 3}
+  _poofPrefab: {fileID: 165672, guid: 146d2ff25be0f824fa285b16b2915ff3, type: 3}
 --- !u!82 &6762448618453932208
 AudioSource:
   m_ObjectHideFlags: 0
@@ -166,7 +175,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 7e92adcd12ea05e41a42b5673e643d65, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.46
   m_Pitch: 1

@@ -349,10 +349,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5302701331135273878}
   - component: {fileID: 8838479716572216171}
+  - component: {fileID: 5328515236685509743}
   - component: {fileID: 5302701331135273960}
   - component: {fileID: 5302701331135273879}
-  - component: {fileID: 5328515236685509743}
-  - component: {fileID: 2835600036078705197}
   m_Layer: 15
   m_Name: Cannon
   m_TagString: Untagged
@@ -368,7 +367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5302701331135273875}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.25, y: 0, z: 0}
   m_LocalScale: {x: 0.5135, y: 0.5135, z: 0.5135}
   m_ConstrainProportionsScale: 0
@@ -393,6 +392,29 @@ MonoBehaviour:
   _obstaclesParent: {fileID: 0}
   _line: {fileID: 5302701331135273879}
   _maxPhysicsFrameIterations: 100
+--- !u!114 &5328515236685509743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5302701331135273875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8472e17ca37c4006bc360501308b35d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cannon
+  _projection: {fileID: 8838479716572216171}
+  _ballPrefab: {fileID: 5004174032603479542, guid: be2f262539015d24f9f5b4df9f4d1119, type: 3}
+  _force: 200
+  _ballSpawn: {fileID: 170399607365253253}
+  _barrelPivot: {fileID: 5302701331069035477}
+  _rotateSpeed: 30
+  _source: {fileID: 5302701331135273960}
+  _clip: {fileID: 8300000, guid: 0a8eb8b33ef85104a8408c5a20f23aa2, type: 3}
+  _leftWheel: {fileID: 421043646559593936}
+  _rightWheel: {fileID: 421043647075275359}
+  _launchParticles: {fileID: 5302701332970039572}
 --- !u!82 &5302701331135273960
 AudioSource:
   m_ObjectHideFlags: 0
@@ -404,7 +426,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 0a8eb8b33ef85104a8408c5a20f23aa2, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.07
   m_Pitch: 1
@@ -516,7 +538,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f2af52778f29e849b99693db33f971d, type: 2}
+  - {fileID: 2100000, guid: fa9f2a404c3e1c643ad92b9c34b013c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -591,42 +613,13 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 3
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 0
---- !u!114 &5328515236685509743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5302701331135273875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8472e17ca37c4006bc360501308b35d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cannon
-  _projection: {fileID: 8838479716572216171}
-  _ballPrefab: {fileID: 2174644832105736609, guid: 1bc912d8a7a320946932672a670dbfd4, type: 3}
-  _ballSpawn: {fileID: 170399607365253253}
-  _force: 20
---- !u!114 &2835600036078705197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5302701331135273875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90ffabedcf709804081297d61b09f586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Rotator
-  _rot: {x: 0, y: 0, z: 0}
 --- !u!1 &8323104799098186274
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,5 +900,10 @@ PrefabInstance:
 --- !u!4 &5302701332950569928 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400650, guid: 45b74d42e5559bf49a14a707b4842b51, type: 3}
+  m_PrefabInstance: {fileID: 5302701332950699714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5302701332970039572 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19867606, guid: 45b74d42e5559bf49a14a707b4842b51, type: 3}
   m_PrefabInstance: {fileID: 5302701332950699714}
   m_PrefabAsset: {fileID: 0}

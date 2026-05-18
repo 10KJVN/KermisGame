@@ -90,6 +90,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumBox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6033086958864095295, guid: fc6b6a70b86668a4ead19d9df27be1c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f99ada0ccc43d7488327900ac2268d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -152,6 +156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumBox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6033086958864095295, guid: fc6b6a70b86668a4ead19d9df27be1c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f99ada0ccc43d7488327900ac2268d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -214,6 +222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumBox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6033086958864095295, guid: fc6b6a70b86668a4ead19d9df27be1c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f99ada0ccc43d7488327900ac2268d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -276,6 +288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumBox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6033086958864095295, guid: fc6b6a70b86668a4ead19d9df27be1c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f99ada0ccc43d7488327900ac2268d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -338,6 +354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box
       objectReference: {fileID: 0}
+    - target: {fileID: 6033086958864095295, guid: fc6b6a70b86668a4ead19d9df27be1c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f99ada0ccc43d7488327900ac2268d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -400,6 +420,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumBox
       objectReference: {fileID: 0}
+    - target: {fileID: 6033086958864095295, guid: fc6b6a70b86668a4ead19d9df27be1c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f99ada0ccc43d7488327900ac2268d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -428,7 +452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4896248713535365968, guid: fc6b6a70b86668a4ead19d9df27be1c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.025
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 4896248713535365968, guid: fc6b6a70b86668a4ead19d9df27be1c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -462,6 +486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumBox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6033086958864095295, guid: fc6b6a70b86668a4ead19d9df27be1c9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f99ada0ccc43d7488327900ac2268d2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
