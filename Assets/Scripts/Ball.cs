@@ -5,12 +5,21 @@ public class Ball : MonoBehaviour, IThrowable
 {
     public const float MaxForce = 50f;
     
-    [SerializeField] private Transform forceTransform;
+    private Transform forceTransform;
     private SpriteMask forceSpriteMask;
+
+    [SerializeField] private Rigidbody _rb;
+    private bool _isGhost;
 
     private void Awake()
     {
         forceSpriteMask = GetComponentInChildren<SpriteMask>();
+    }
+
+    public void Init(Vector3 velocity, bool isGhost)
+    {
+        _isGhost = isGhost;
+        _rb.AddForce(velocity, ForceMode.Impulse);
     }
 
     // Just launches in the direction of your POV.
@@ -31,4 +40,13 @@ public class Ball : MonoBehaviour, IThrowable
     {
         forceSpriteMask.alphaCutoff = 1;
     }
+    
+    // TODO: Add missing AudioSource, AudioClip[], GameObject refs
+    // public void OnCollisionEnter(Collision col)
+    // {
+    //     if (_isGhost) return;
+    //     Instantiate(_poofPrefab, col.contacts[0].point, Quaternion.Euler(col.contacts[0].normal));
+    //     _source.clip = _clips[Random.Range(0, _clips.Length)];
+    //     _source.Play();
+    // }
 }
