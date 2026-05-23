@@ -36,7 +36,14 @@ public class Throwable : MonoBehaviour
     private float CalculateHoldDownForce(float holdTime)
     {
         float maxForceHoldDownTime = 2f;
-        float holdTimeNormalized = Mathf.Clamp01(holdTime / maxForceHoldDownTime);
+        //float holdTimeNormalized = Mathf.Clamp01(holdTime / maxForceHoldDownTime);
+        float holdTimeNormalized = Mathf.PingPong(holdTime, Mathf.Clamp01(holdTime) / maxForceHoldDownTime);
+        
+        // if (holdTime >= maxForceHoldDownTime)
+        // {
+        //     
+        // }
+        
         float force = holdTimeNormalized * Ball.MaxForce;
         return force;
     }
