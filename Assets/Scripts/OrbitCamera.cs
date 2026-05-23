@@ -7,6 +7,7 @@ public class OrbitCamera : MonoBehaviour
     [SerializeField] private Transform focus;
     [SerializeField, Range(1f, 120f)] private float distance = 5f;
     [SerializeField, Min(0f)] private float focusRadius = 1f;
+    [SerializeField, Range(0f, 1f)] private float focusCentering = 0.5f;
     
     private Vector3 _focusPoint;
 
@@ -29,13 +30,20 @@ public class OrbitCamera : MonoBehaviour
         if (focusRadius > 0f)
         {
             var distance = Vector3.Distance(targetPoint, _focusPoint);
+            var t = 1f;
+
+            if (distance > 0.01f && focusRadius > 0f)
+            {
+                t = Mathf.Pow(1f - focusCentering, Time.unscaledDeltaTime);
+            }
             
             if (distance > focusRadius)
             {
-                _focusPoint = Vector3.Lerp(targetPoint, _focusPoint, focusRadius / distance);
+                t = Mathf.Min(t, focusRadius / distance);
             }
+            
+            _focusPoint = Vector3.Lerp(targetPoint, _focusPoint, t);
         }
-        
         else
         {
             targetPoint = focus.position;
