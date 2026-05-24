@@ -18,7 +18,7 @@ public class GrenadeThrower : MonoBehaviour
     [SerializeField] private LineRenderer trajectoryLine; // reference to LineRenderer component
 
     private bool _isCharging = false; // flag to check if player is charging the throw
-    private float chargeTime = 0f; // time player has been charging the throw
+    private float _chargeTime = 0f; // time player has been charging the throw
     private Camera _mainCamera;
 
     private void Start()
@@ -47,22 +47,22 @@ public class GrenadeThrower : MonoBehaviour
     private void StartThrowing()
     {
         _isCharging = true;
-        chargeTime = 0f;
+        _chargeTime = 0f;
         
         trajectoryLine.enabled = true;
     }
 
     private void ChargeThrow()
     {
-        chargeTime += Time.deltaTime;
+        _chargeTime += Time.deltaTime;
         
-        Vector3 grenadeVelocity = (_mainCamera.transform.forward + throwDirection).normalized * Mathf.Min(chargeTime * throwForce, maxForce);
+        Vector3 grenadeVelocity = (_mainCamera.transform.forward + throwDirection).normalized * Mathf.Min(_chargeTime * throwForce, maxForce);
         ShowTrajectory(throwPosition.position + throwPosition.forward, grenadeVelocity);
     }
 
     private void ReleaseThrow()
     {
-        ThrowGrenade(Mathf.Min(chargeTime * throwForce, maxForce));
+        ThrowGrenade(Mathf.Min(_chargeTime * throwForce, maxForce));
         _isCharging = false;
         // hide line
     }
