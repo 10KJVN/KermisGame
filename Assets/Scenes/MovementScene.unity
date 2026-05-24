@@ -279,17 +279,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbitCamera
   focus: {fileID: 2049648962}
-  obstructionMask:
-    serializedVersion: 2
-    m_Bits: 192
   distance: 7
-  focusRadius: 1
+  focusRadius: 5
   focusCentering: 0.5
   rotationSpeed: 90
   minVerticalAngle: -30
   maxVerticalAngle: 60
   alignDelay: 5
   alignSmoothRange: 45
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!114 &320468487
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,15 +4,15 @@ using UnityEngine;
 public class OrbitCamera : MonoBehaviour
 {
     [SerializeField] private Transform focus;
-    [SerializeField] private LayerMask obstructionMask = -1;
-    [SerializeField, Range(1f, 120f)] private float distance = 5f;
-    [SerializeField, Min(0f)] private float focusRadius = 1f;
+    [SerializeField, Range(1f, 120f)] private float distance = 7f;
+    [SerializeField, Min(0f)] private float focusRadius = 5f;
     [SerializeField, Range(0f, 1f)] private float focusCentering = 0.5f;
     [SerializeField, Range(1f, 360f)] private float rotationSpeed = 90f;
     [SerializeField, Range(-89f, 89f)] private float minVerticalAngle = -30f;
     [SerializeField, Range(-89f, 89f)] private float maxVerticalAngle = 60f;
     [SerializeField, Min(0f)] private float alignDelay = 5f;
     [SerializeField, Range(0f, 90f)] private float alignSmoothRange = 45f;
+    [SerializeField] private LayerMask obstructionMask = -1;
     
     private Camera _regularCamera;
     private Vector3 _focusPoint;
@@ -33,20 +33,20 @@ public class OrbitCamera : MonoBehaviour
             return halfExtends;
         }
     }
-
-    private void Awake()
-    {
-        _regularCamera = GetComponent<Camera>();
-        _focusPoint = focus.position;
-        transform.localRotation = Quaternion.Euler(_orbitAngles);
-    }
-
+    
     private void OnValidate()
     {
         if (maxVerticalAngle < minVerticalAngle)
         {
             maxVerticalAngle = minVerticalAngle;
         }
+    }
+
+    private void Awake()
+    {
+        _regularCamera = GetComponent<Camera>();
+        _focusPoint = focus.position;
+        transform.localRotation = Quaternion.Euler(_orbitAngles);
     }
 
     private void LateUpdate()
@@ -64,7 +64,7 @@ public class OrbitCamera : MonoBehaviour
             lookRotation = transform.localRotation;
         }
         
-        var lookDirection = transform.forward;
+        var lookDirection = lookRotation * Vector3.forward; // Was this the bugged line?
         var lookPosition = _focusPoint - lookDirection * distance;
         
         var rectOffset = lookDirection * _regularCamera.nearClipPlane;
@@ -74,7 +74,7 @@ public class OrbitCamera : MonoBehaviour
         var castDistance = castLine.magnitude;
         var castDirection = castLine / castDistance;
 
-        if (Physics.BoxCast(castFrom, CameraHalfExtends,castDirection, out RaycastHit hit,
+        if (Physics.BoxCast(castFrom, CameraHalfExtends, castDirection, out RaycastHit hit,
                 lookRotation, castDistance, obstructionMask))
         {
             rectPosition = castFrom + castDirection * hit.distance;
@@ -94,7 +94,7 @@ public class OrbitCamera : MonoBehaviour
             var distance = Vector3.Distance(targetPoint, _focusPoint);
             var t = 1f;
 
-            if (distance > 0.01f && focusRadius > 0f)
+            if (distance > 0.01f && focusCentering > 0f) // Change this next
             {
                 t = Mathf.Pow(1f - focusCentering, Time.unscaledDeltaTime);
             }
@@ -108,14 +108,17 @@ public class OrbitCamera : MonoBehaviour
         }
         else
         {
-            targetPoint = focus.position;
+            _focusPoint = targetPoint; // Change this next, if still not fixed
         }
     }
 
+    // TODO: Define Vertical, Horizontal Camera input axes bound to the third and fourth axis.
+    // Done, but is this the cause of the issue???
     private bool ManualRotation()
     {
-        // TODO: Define Vertical, Horizontal Camera input axes bound to the third and fourth axis.
-        var input = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
+        var input = new Vector2(Input.GetAxis("Vertical Camera"), Input.GetAxis("Horizontal Camera"));
+        Debug.Log($"Input: {input.x}, {input.y}");  // Debug Statement #1
+        
         const float e = 0.001f;
 
         if (input.x < -e || input.x > e || input.y < -e || input.y > e)
@@ -130,7 +133,7 @@ public class OrbitCamera : MonoBehaviour
 
     private bool AutomaticRotation()
     {
-        if (Time.unscaledTime - _lastManualRotationTime > alignDelay)
+        if (Time.unscaledTime - _lastManualRotationTime < alignDelay)
         {
             return false;
         }
@@ -156,7 +159,7 @@ public class OrbitCamera : MonoBehaviour
         }
         else if (180f - deltaAbs < alignSmoothRange)
         {
-            rotationChange *= (180f - deltaAbs) /  alignSmoothRange;
+            rotationChange *= (180f - deltaAbs) / alignSmoothRange;
         }
         
         _orbitAngles.y = Mathf.MoveTowards(
