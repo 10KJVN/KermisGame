@@ -280,6 +280,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OrbitCamera
   focus: {fileID: 2049648962}
   distance: 5
+  focusRadius: 1
+  focusCentering: 0.5
+  rotationSpeed: 90
 --- !u!114 &320468487
 MonoBehaviour:
   m_ObjectHideFlags: 0
