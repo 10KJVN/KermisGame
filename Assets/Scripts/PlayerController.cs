@@ -1,31 +1,45 @@
 using UnityEngine;
 
+/// <summary>
+/// Physics‑based character controller for third‑person (or top‑down) movement.
+/// Features:
+/// - Smooth ground and air movement with separate acceleration values
+/// - Jumping with configurable height and extra air jumps
+/// - Slope handling: only surfaces within maxGroundAngle are considered "ground"
+/// - Contact normal averaging for stable movement on uneven surfaces
+/// - Input relative to an optional transform (e.g., camera or character orientation)
+/// </summary>
+
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
     // Ground Contact Count's public getter.
     public int Gcc { get; private set; }
     
+    [Header("Movement")]
     [SerializeField] private Transform playerInputSpace;
     [SerializeField, Range(0f, 100f)] private float maxSpeed = 10f;
     [SerializeField, Range(0f, 100f)] private float maxAcceleration = 10f;
     [SerializeField, Range(0f, 100f)] private float maxAirAcceleration = 1f;
+    
+    [Header("Jumping")]
     [SerializeField, Range(0f, 10f)] private float jumpHeight = 2f;
     [SerializeField, Range(0f, 5f)] private int maxAirJumps = 0;
+    
+    [Header("Slope")]
     [SerializeField, Range(0f, 90f)] private float maxGroundAngle = 25f;
     
     private Vector3 velocity;
     private Vector3 desiredVelocity;
     private Vector3 contactNormal;
-    [Tooltip("Interpolate & Freeze Rotations")]
-    private Rigidbody body;
+    private Rigidbody body; // Interpolate it and freeze rotations
     //private Animator animator;
-
-    [SerializeField] private int jumpPhase;
-    [SerializeField] private bool desiredJump;
     
     [Header("Debug")]
+    [SerializeField] private int jumpPhase;
+    [SerializeField] private bool desiredJump;
     [SerializeField] private int groundContactCount;
+    
     private float minGroundDotProduct;
     private bool OnGround => groundContactCount > 0;
 

@@ -1,17 +1,41 @@
 using UnityEngine;
 
+/// <summary>
+/// Orbital camera that rotates around a focus target.
+/// Features:
+/// - Manual rotation via input axes (Vertical/Horizontal Camera)
+/// - Automatic rotation that aligns with the target's movement direction
+/// - Smooth focus point following with radius and centering
+/// - Obstruction avoidance using box casting
+/// - Mouse wheel zoom with configurable range and speed
+/// </summary>
+
 [RequireComponent(typeof(Camera))]
 public class OrbitCamera : MonoBehaviour
 {
+    [Header("Target")]
     [SerializeField] private Transform focus;
     [SerializeField, Range(1f, 120f)] private float distance = 7f;
+
+    [Header("Zoom")]
+    [SerializeField] private float zoomSpeed = 20f;
+    [SerializeField] private float minDistance = 5f;
+    [SerializeField] private float maxDistance = 15f;
+
+    [Header("Focus Point")]
     [SerializeField, Min(0f)] private float focusRadius = 5f;
     [SerializeField, Range(0f, 1f)] private float focusCentering = 0.5f;
+
+    [Header("Rotation")]
     [SerializeField, Range(1f, 360f)] private float rotationSpeed = 90f;
     [SerializeField, Range(-89f, 89f)] private float minVerticalAngle = -30f;
     [SerializeField, Range(-89f, 89f)] private float maxVerticalAngle = 60f;
+
+    [Header("Automatic Rotation")]
     [SerializeField, Min(0f)] private float alignDelay = 5f;
     [SerializeField, Range(0f, 90f)] private float alignSmoothRange = 45f;
+
+    [Header("Obstruction")]
     [SerializeField] private LayerMask obstructionMask = -1;
     
     private Camera _regularCamera;
@@ -80,7 +104,8 @@ public class OrbitCamera : MonoBehaviour
             rectPosition = castFrom + castDirection * hit.distance;
             lookPosition = rectPosition - rectOffset;
         }
-        
+
+        HandleZoom();
         transform.SetPositionAndRotation(lookPosition, lookRotation);
     }
 
@@ -185,5 +210,18 @@ public class OrbitCamera : MonoBehaviour
         float angle = Mathf.Acos(direction.y) * Mathf.Rad2Deg;
         return direction.x < 0f ? 360f - angle : angle;
     }
+
+    #region Custom Extension Methods
+    private void HandleZoom()
+    {
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if (Mathf.Abs(scroll) > 0.01f)
+        {
+                distance -= scroll * zoomSpeed;
+                distance = Mathf.Clamp(distance, minDistance, maxDistance);
+        }
+    }
+
+    #endregion
     
 }
