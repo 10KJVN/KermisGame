@@ -15,6 +15,11 @@ public class HoldReleaseOscillator : MonoBehaviour
     public enum AimMode { FixedForward, CameraForward, MouseWorld }
     public AimMode aimMode = AimMode.CameraForward;
     public Vector3 fixedDirection = Vector3.forward;
+    
+    [Header("Trajectory Settings")]
+    public LineRenderer trajectoryLine;
+    public int trajectoryResolution = 30;
+    public float timeStep = 0.05f;
 
     [Header("Events (for UI, sound, etc.)")]
     public UnityEvent<float> onPowerChanged;
@@ -39,9 +44,16 @@ public class HoldReleaseOscillator : MonoBehaviour
             float elapsed = Time.time - _chargeStartTime;
             float t = Mathf.PingPong(elapsed * oscillationSpeed, 1f);
             _currentPower = Mathf.Lerp(minPower, maxPower, t);
+            
+            UpdateTrajectory(_currentPower);
+            
             onPowerChanged?.Invoke(_currentPower);
         }
-
+        else if (!trajectoryLine && trajectoryLine.enabled)
+        {
+            trajectoryLine.enabled = false;
+        }
+    
         // Mouse Up, Launch!
         if (Input.GetMouseButtonUp(0) && _isCharging)
         {
@@ -85,6 +97,25 @@ public class HoldReleaseOscillator : MonoBehaviour
             default:
                 return Vector3.forward;
         }
+    }
+    
+    private void UpdateTrajectory(float power)
+    {
+        if (!trajectoryLine) return;
+        trajectoryLine.enabled = true;
+
+        Vector3 startPos = spawnPoint.position;
+        Vector3 velocity = GetAimDirection() * (baseForce * power);
+        Vector3 gravity = Physics.gravity;
+
+        Vector3[] points = new Vector3[trajectoryResolution];
+        for (int i = 0; i < trajectoryResolution; i++)
+        {
+            float t = i * timeStep;
+            points[i] = startPos + velocity * t + 0.5f * gravity * t * t;
+        }
+        trajectoryLine.positionCount = trajectoryResolution;
+        trajectoryLine.SetPositions(points);
     }
     
 }
