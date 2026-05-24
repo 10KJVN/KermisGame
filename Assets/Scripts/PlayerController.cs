@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     // Ground Contact Count's public getter.
     public int Gcc { get; private set; }
     
+    [SerializeField] private Transform playerInputSpace;
     [SerializeField, Range(0f, 100f)] private float maxSpeed = 10f;
     [SerializeField, Range(0f, 100f)] private float maxAcceleration = 10f;
     [SerializeField, Range(0f, 100f)] private float maxAirAcceleration = 1f;
@@ -47,8 +48,18 @@ public class PlayerController : MonoBehaviour
         playerInput.x = Input.GetAxis("Horizontal");
         playerInput.y = Input.GetAxis("Vertical");
         playerInput = Vector2.ClampMagnitude(playerInput, 1f);
+
+        if (playerInputSpace)
+        {
+            desiredVelocity = playerInputSpace.TransformDirection(
+                playerInput.x, 0f, playerInput.y
+                ) * maxSpeed;
+        }
+        else
+        {   
+            desiredVelocity = new Vector3(playerInput.x, 0f, playerInput.y) * maxSpeed;
+        }
         
-        desiredVelocity = new Vector3(playerInput.x, 0f, playerInput.y) * maxSpeed;
         desiredJump |= Input.GetButtonDown("Jump");
     }
 

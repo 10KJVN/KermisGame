@@ -283,6 +283,10 @@ MonoBehaviour:
   focusRadius: 1
   focusCentering: 0.5
   rotationSpeed: 90
+  minVerticalAngle: -30
+  maxVerticalAngle: 60
+  alignDelay: 5
+  alignSmoothRange: 45
 --- !u!114 &320468487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,6 +672,10 @@ PrefabInstance:
       propertyPath: maxAirJumps
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5935569155014075942, guid: d5a216dc1fab0d04b81f1d63da13325a, type: 3}
+      propertyPath: playerInputSpace
+      value: 
+      objectReference: {fileID: 320468490}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
