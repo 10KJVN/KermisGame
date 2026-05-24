@@ -4,6 +4,7 @@ using UnityEngine;
 public class OrbitCamera : MonoBehaviour
 {
     [SerializeField] private Transform focus;
+    [SerializeField] private LayerMask obstructionMask = -1;
     [SerializeField, Range(1f, 120f)] private float distance = 5f;
     [SerializeField, Min(0f)] private float focusRadius = 1f;
     [SerializeField, Range(0f, 1f)] private float focusCentering = 0.5f;
@@ -13,13 +14,29 @@ public class OrbitCamera : MonoBehaviour
     [SerializeField, Min(0f)] private float alignDelay = 5f;
     [SerializeField, Range(0f, 90f)] private float alignSmoothRange = 45f;
     
+    private Camera _regularCamera;
     private Vector3 _focusPoint;
     private Vector3 _previousFocusPoint;
     private Vector2 _orbitAngles = new(45, 0f);
     private float _lastManualRotationTime;
 
+    private Vector3 CameraHalfExtends
+    {
+        get
+        {
+            Vector3 halfExtends;
+            halfExtends.y = 
+                _regularCamera.nearClipPlane *
+                Mathf.Tan(0.5f * Mathf.Deg2Rad * _regularCamera.fieldOfView);
+            halfExtends.x = halfExtends.y * _regularCamera.aspect;
+            halfExtends.z = 0f;
+            return halfExtends;
+        }
+    }
+
     private void Awake()
     {
+        _regularCamera = GetComponent<Camera>();
         _focusPoint = focus.position;
         transform.localRotation = Quaternion.Euler(_orbitAngles);
     }
@@ -49,6 +66,20 @@ public class OrbitCamera : MonoBehaviour
         
         var lookDirection = transform.forward;
         var lookPosition = _focusPoint - lookDirection * distance;
+        
+        var rectOffset = lookDirection * _regularCamera.nearClipPlane;
+        var rectPosition = lookPosition + rectOffset;
+        var castFrom = focus.position;
+        var castLine = rectPosition - castFrom;
+        var castDistance = castLine.magnitude;
+        var castDirection = castLine / castDistance;
+
+        if (Physics.BoxCast(castFrom, CameraHalfExtends,castDirection, out RaycastHit hit,
+                lookRotation, castDistance, obstructionMask))
+        {
+            rectPosition = castFrom + castDirection * hit.distance;
+            lookPosition = rectPosition - rectOffset;
+        }
         
         transform.SetPositionAndRotation(lookPosition, lookRotation);
     }
@@ -148,7 +179,7 @@ public class OrbitCamera : MonoBehaviour
         }
     }
 
-    static float GetAngle(Vector2 direction)
+    private static float GetAngle(Vector2 direction)
     {
         float angle = Mathf.Acos(direction.y) * Mathf.Rad2Deg;
         return direction.x < 0f ? 360f - angle : angle;
