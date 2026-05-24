@@ -64,7 +64,7 @@ public class OrbitCamera : MonoBehaviour
             lookRotation = transform.localRotation;
         }
         
-        var lookDirection = lookRotation * Vector3.forward; // Was this the bugged line?
+        var lookDirection = lookRotation * Vector3.forward;
         var lookPosition = _focusPoint - lookDirection * distance;
         
         var rectOffset = lookDirection * _regularCamera.nearClipPlane;
@@ -94,7 +94,7 @@ public class OrbitCamera : MonoBehaviour
             var distance = Vector3.Distance(targetPoint, _focusPoint);
             var t = 1f;
 
-            if (distance > 0.01f && focusCentering > 0f) // Change this next
+            if (distance > 0.01f && focusCentering > 0f)
             {
                 t = Mathf.Pow(1f - focusCentering, Time.unscaledDeltaTime);
             }
@@ -108,16 +108,14 @@ public class OrbitCamera : MonoBehaviour
         }
         else
         {
-            _focusPoint = targetPoint; // Change this next, if still not fixed
+            _focusPoint = targetPoint;
         }
     }
-
-    // TODO: Define Vertical, Horizontal Camera input axes bound to the third and fourth axis.
-    // Done, but is this the cause of the issue???
+    
     private bool ManualRotation()
     {
         var input = new Vector2(Input.GetAxis("Vertical Camera"), Input.GetAxis("Horizontal Camera"));
-        Debug.Log($"Input: {input.x}, {input.y}");  // Debug Statement #1
+        // Debug.Log($"Input: {input.x}, {input.y}");  // Debug Statement #1
         
         const float e = 0.001f;
 
@@ -162,7 +160,7 @@ public class OrbitCamera : MonoBehaviour
             rotationChange *= (180f - deltaAbs) / alignSmoothRange;
         }
         
-        _orbitAngles.y = Mathf.MoveTowards(
+        _orbitAngles.y = Mathf.MoveTowardsAngle(
             _orbitAngles.y, headingAngle, rotationChange);
         
         return true;
