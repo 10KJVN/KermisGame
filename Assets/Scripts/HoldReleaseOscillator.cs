@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -28,6 +29,12 @@ public class HoldReleaseOscillator : MonoBehaviour
     private bool _isCharging = false;
     private float _chargeStartTime;
     private float _currentPower = 0.5f;
+    private Camera _mainCamera;
+
+    private void Start()
+    {
+        _mainCamera = Camera.main;
+    }
 
     private void Update()
     {
@@ -84,10 +91,10 @@ public class HoldReleaseOscillator : MonoBehaviour
                 return fixedDirection.normalized;
             
             case AimMode.CameraForward:
-                return Camera.main!.transform.forward;
+                return _mainCamera.transform.forward;
             
             case AimMode.MouseWorld:
-                Ray ray = Camera.main!.ScreenPointToRay(Input.mousePosition);
+                Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out RaycastHit hit, 100f))
                 {
                     return (hit.point - spawnPoint.position).normalized;
@@ -112,7 +119,7 @@ public class HoldReleaseOscillator : MonoBehaviour
         for (int i = 0; i < trajectoryResolution; i++)
         {
             float t = i * timeStep;
-            points[i] = startPos + velocity * t + 0.5f * gravity * t * t;
+            points[i] = startPos + velocity * t + gravity * (0.5f * t * t);
         }
         trajectoryLine.positionCount = trajectoryResolution;
         trajectoryLine.SetPositions(points);

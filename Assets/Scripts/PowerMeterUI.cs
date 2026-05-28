@@ -13,7 +13,6 @@ public class PowerMeterUI : MonoBehaviour
             oscillator.onPowerChanged.AddListener(UpdatePower);
             powerSlider.gameObject.SetActive(false);
             oscillator.onRelease.AddListener((p) => powerSlider.gameObject.SetActive(false));
-            // Je kunt ook bij indrukken de slider tonen – doe dat in de oscillator of met een extra event.
         }
     }
 
