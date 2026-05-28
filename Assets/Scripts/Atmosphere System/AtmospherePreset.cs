@@ -32,6 +32,6 @@ public class AtmospherePreset : ScriptableObject
     public float cloudPower = 1f;
     public Vector2 cloudSpeed = Vector2.zero;
 
-    [Header("Optional: Post‑Processing Volume Profile")]
+    [Header("Optional: Post‑Processing")]
     public VolumeProfile volumeProfile;
 }

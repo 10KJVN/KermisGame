@@ -786,7 +786,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 3b162bd5fd1a11443ab9b55fb691f4c0, type: 2}
 --- !u!4 &832575519
 Transform:
   m_ObjectHideFlags: 0
@@ -1441,6 +1441,14 @@ PrefabInstance:
       propertyPath: sunLight
       value: 
       objectReference: {fileID: 1330363447}
+    - target: {fileID: 5846651098348192238, guid: c67e2824dd8e16c48bcfa859f97d5d1d, type: 3}
+      propertyPath: presets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846651098348192238, guid: c67e2824dd8e16c48bcfa859f97d5d1d, type: 3}
+      propertyPath: 'presets.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: da66935ed97d4a749b23a50526062df6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

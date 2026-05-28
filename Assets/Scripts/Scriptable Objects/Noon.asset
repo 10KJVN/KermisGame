@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512f8fcf574f8d440a703ae1cef7b42d, type: 3}
+  m_Name: Noon
+  m_EditorClassIdentifier: Assembly-CSharp::AtmospherePreset
+  sunIntensity: 1
+  sunSize: 0.1
+  zenithColor: {r: 0, g: 0, b: 1, a: 1}
+  horizonColor: {r: 0, g: 1, b: 1, a: 1}
+  nadirColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  cloudScatter: 0.5
+  cloudDensity: 0.3
+  panSpeed: {x: 0, y: 0}
+  fogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  fogDensity: 0.02
+  cloudPower: 1
+  cloudSpeed: {x: 0, y: 0}
+  volumeProfile: {fileID: 11400000, guid: ab09877e2e707104187f6f83e2f62510, type: 2}
