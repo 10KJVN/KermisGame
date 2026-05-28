@@ -16,6 +16,7 @@ public class OrbitCamera : MonoBehaviour
     [Header("Target")]
     [SerializeField] private Transform focus;
     [SerializeField, Range(1f, 120f)] private float distance = 7f;
+    [SerializeField] private Vector2 initialAngles = new(45f, 0f);
 
     [Header("Zoom")]
     [SerializeField] private float zoomSpeed = 20f;
@@ -70,6 +71,7 @@ public class OrbitCamera : MonoBehaviour
     {
         _regularCamera = GetComponent<Camera>();
         _focusPoint = focus.position;
+        _orbitAngles = initialAngles;
         transform.localRotation = Quaternion.Euler(_orbitAngles);
     }
 
