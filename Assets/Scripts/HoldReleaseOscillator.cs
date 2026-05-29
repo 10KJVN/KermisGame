@@ -16,6 +16,8 @@ public class HoldReleaseOscillator : MonoBehaviour
     public enum AimMode { FixedForward, CameraForward, MouseWorld }
     public AimMode aimMode = AimMode.CameraForward;
     public Vector3 fixedDirection = Vector3.forward;
+    [Tooltip("This property only applies to MouseWorld")]
+    [SerializeField] private float maxDistance = 100f;
     
     [Header("Trajectory Settings")]
     public LineRenderer trajectoryLine;
@@ -95,7 +97,7 @@ public class HoldReleaseOscillator : MonoBehaviour
             
             case AimMode.MouseWorld:
                 Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out RaycastHit hit, 100f))
+                if (Physics.Raycast(ray, out RaycastHit hit, maxDistance))
                 {
                     return (hit.point - spawnPoint.position).normalized;
                 }
