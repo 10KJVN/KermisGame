@@ -50,6 +50,6 @@ public class PlayerInteractor : MonoBehaviour
         if (ReferenceEquals(_focused, nearest)) return;
         _focused?.OnFocusLost();
         _focused = nearest;
-        _focused.OnFocusGained();
+        _focused?.OnFocusGained();
     }
 }
