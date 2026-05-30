@@ -3,6 +3,11 @@ using UnityEngine.Events;
 
 namespace Components
 {
+    /// <summary>
+    /// MonoBehaviour implementation of IInteractable.
+    /// Adds a yellow outline at runtime and exposes a UnityEvent for interaction logic.
+    /// </summary>
+    
     public class Interactable : MonoBehaviour, IInteractable
     {
         public string DisplayName => displayName;

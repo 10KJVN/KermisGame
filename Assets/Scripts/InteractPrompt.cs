@@ -1,6 +1,10 @@
-using System;
 using UnityEngine;
 using TMPro;
+
+/// <summary>
+/// World‑space UI prompt that follows the focused interactable.
+/// Displays a key hint and the object's DisplayName.
+/// </summary>
 
 public class InteractPrompt : MonoBehaviour
 {

@@ -1,6 +1,9 @@
-using System;
 using UnityEngine;
 
+/// <summary>
+/// Simple ray‑cast based interactor.
+/// Press E to interact with the first IInteractable hit within range.
+/// </summary>
 
 public class Interactor : MonoBehaviour
 {

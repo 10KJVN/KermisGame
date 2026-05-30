@@ -1,5 +1,9 @@
-using System;
 using UnityEngine;
+
+/// <summary>
+/// Sphere‑overlap based interactor.
+/// Finds the nearest interactable in range, highlights it, shows a UI prompt, and interacts on E.
+/// </summary>
 
 public class PlayerInteractor : MonoBehaviour
 {
