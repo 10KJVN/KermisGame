@@ -669,7 +669,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 12
+  far clip plane: 40
   field of view: 60.000004
   orthographic: 0
   orthographic size: 10
@@ -820,6 +820,7 @@ GameObject:
   - component: {fileID: 375236082}
   - component: {fileID: 375236085}
   - component: {fileID: 375236083}
+  - component: {fileID: 375236086}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -876,6 +877,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachinePipeline
+--- !u!114 &375236086
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375236081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachineBasicMultiChannelPerlin
+  m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
+  m_PivotOffset: {x: 5, y: 10, z: 7}
+  m_AmplitudeGain: 0.32
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: -400.86685, y: 869.7627, z: 849.06744}
 --- !u!1 &396608528
 GameObject:
   m_ObjectHideFlags: 3
@@ -2612,7 +2630,7 @@ GameObject:
   - component: {fileID: 1604414864}
   - component: {fileID: 1604414866}
   m_Layer: 0
-  m_Name: Virtual Camera 2
+  m_Name: Virtual Camera 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2642,7 +2660,7 @@ MonoBehaviour:
     FieldOfView: 60.000004
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 12
+    FarClipPlane: 40
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
@@ -2702,7 +2720,7 @@ MonoBehaviour:
   m_SmoothingTime: 0
   m_Damping: 0
   m_DampingWhenOccluded: 0
-  m_OptimalTargetDistance: 0
+  m_OptimalTargetDistance: 2
 --- !u!1 &1727088822
 GameObject:
   m_ObjectHideFlags: 3
@@ -2794,7 +2812,7 @@ GameObject:
   - component: {fileID: 1742520520}
   - component: {fileID: 1742520522}
   m_Layer: 0
-  m_Name: Virtual Camera 1
+  m_Name: Virtual Camera 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2884,7 +2902,7 @@ MonoBehaviour:
   m_SmoothingTime: 0
   m_Damping: 0
   m_DampingWhenOccluded: 0
-  m_OptimalTargetDistance: 0
+  m_OptimalTargetDistance: 1
 --- !u!1 &1788814035
 GameObject:
   m_ObjectHideFlags: 3
@@ -3160,14 +3178,14 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_ShowDebugText: 0
   m_ChildCameras:
-  - {fileID: 1742520520}
   - {fileID: 1604414864}
+  - {fileID: 1742520520}
   m_ActivateAfter: 0
   m_MinDuration: 0
   m_RandomizeChoice: 0
   m_DefaultBlend:
-    m_Style: 0
-    m_Time: 0
+    m_Style: 1
+    m_Time: 0.8
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -3188,8 +3206,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1742520521}
   - {fileID: 1604414865}
+  - {fileID: 1742520521}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1978213358
