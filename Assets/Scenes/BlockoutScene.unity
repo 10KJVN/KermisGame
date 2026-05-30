@@ -1116,6 +1116,27 @@ MonoBehaviour:
   OnInteract:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &1015122208
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015122205}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 2, z: 3}
+  m_Center: {x: 0, y: 0.7, z: -5}
 --- !u!224 &1114817122 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8407858784360054303, guid: f72b86bd275df9e47ac792f1d69a8db6, type: 3}
@@ -1764,6 +1785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1865330075}
+  - component: {fileID: 1865330076}
   m_Layer: 5
   m_Name: InteractPrompt
   m_TagString: Untagged
@@ -1791,6 +1813,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1865330076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865330074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe417c7da1133d4a86897e18479fc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractPrompt
+  label: {fileID: 2071514738}
+  worldOffset: {x: 0, y: 1, z: 0}
+  keyHint: '[E]'
 --- !u!1001 &1978213358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1869,7 +1906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2071514737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3411,6 +3448,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7694699354288834289, guid: 230bfa17801904d469f735c9bf04980c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1015122206}
+    - targetCorrespondingSourceObject: {fileID: 7694699354288834289, guid: 230bfa17801904d469f735c9bf04980c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1015122208}
   m_SourcePrefab: {fileID: 100100000, guid: 230bfa17801904d469f735c9bf04980c, type: 3}
 --- !u!1 &4903873739769632825
 GameObject:
@@ -3958,6 +3998,7 @@ MonoBehaviour:
   interactableLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+  prompt: {fileID: 1865330076}
 --- !u!65 &6410672379916289399
 BoxCollider:
   m_ObjectHideFlags: 0
