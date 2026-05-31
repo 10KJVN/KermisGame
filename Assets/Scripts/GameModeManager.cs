@@ -1,7 +1,10 @@
 using Cinemachine;
 using UnityEngine;
 
-public enum GameState { Exploration, Shooting }
+public enum GameState
+{
+    Exploration, Shooting, Fishing //, 3rd miniGame
+}
 
 public class GameModeManager : MonoBehaviour
 {
