@@ -219,8 +219,8 @@ public class OrbitCamera : MonoBehaviour
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (Mathf.Abs(scroll) > 0.01f)
         {
-                distance -= scroll * zoomSpeed;
-                distance = Mathf.Clamp(distance, minDistance, maxDistance);
+            distance -= scroll * zoomSpeed;
+            distance = Mathf.Clamp(distance, minDistance, maxDistance);
         }
     }
 
