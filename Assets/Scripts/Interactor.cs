@@ -1,3 +1,4 @@
+using InteractionSystem.Interfaces;
 using UnityEngine;
 
 /// <summary>
