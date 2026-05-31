@@ -56,6 +56,17 @@ public class PlayerController : MonoBehaviour
         //animator = GetComponentInChildren<Animator>();
     }
 
+    private void OnEnable()
+    {
+        //Debug.Log("PlayerController: ENABLED");
+    }
+
+    private void OnDisable()
+    {
+        ForceStopMovement();
+        //Debug.Log("PlayerController: DISABLED");
+    }
+
     private void Update()
     {
         Vector2 playerInput;
@@ -194,4 +205,19 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    #region Custom helper methods
+    private void ForceStopMovement()
+    {
+        body.linearVelocity = Vector3.zero;
+        body.angularVelocity = Vector3.zero;
+        
+        velocity = Vector3.zero;
+        desiredVelocity = Vector3.zero;
+        
+        desiredJump = false;
+        jumpPhase = 0;
+    }
+    #endregion
+
 }

@@ -11,6 +11,26 @@ public class GameModeManager : MonoBehaviour
 
     private GameState _currentState;
 
+    private void Start()
+    {
+        _currentState = GameState.Exploration;
+        //explorationCamera.Priority = 11;
+    }
+
+    private void Update()
+    {
+        if (_currentState == GameState.Shooting &&
+            Input.GetKeyDown(KeyCode.Escape))
+        {
+            EnterExploration();
+        }
+        
+        else if (_currentState == GameState.Exploration)
+        {
+            
+        }
+    }
+
     public void EnterExploration()
     {
         _currentState = GameState.Exploration;
