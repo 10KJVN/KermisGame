@@ -6,7 +6,8 @@ public class Breakable : MonoBehaviour {
     [SerializeField] private float _collisionMultiplier = 100;
     [SerializeField] private bool _broken;
 
-    private void OnCollisionEnter(Collision collision) {
+    private void OnCollisionEnter(Collision collision) 
+    {
         if (_broken) return;
         if (collision.relativeVelocity.magnitude >= _breakForce) {
             _broken = true;

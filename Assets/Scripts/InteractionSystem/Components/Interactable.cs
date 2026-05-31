@@ -1,11 +1,11 @@
+using InteractionSystem.Interfaces;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Components
+namespace InteractionSystem.Components
 {
     /// <summary>
-    /// MonoBehaviour implementation of IInteractable.
-    /// Adds a yellow outline at runtime and exposes a UnityEvent for interaction logic.
+    /// This is the component you place on ALL interactable objects.
     /// </summary>
     
     public class Interactable : MonoBehaviour, IInteractable
