@@ -8,7 +8,11 @@ public enum GameState
 
 public class GameModeManager : MonoBehaviour
 {
+    [Header("Class References")]
     [SerializeField] private PlayerController playerController;
+    [SerializeField] private UIManager uiManager;
+    
+    [Header("Camera References")]
     [SerializeField] private CinemachineFreeLook explorationCamera;
     [SerializeField] private CinemachineVirtualCamera shooterCamera;
 
@@ -17,7 +21,6 @@ public class GameModeManager : MonoBehaviour
     private void Start()
     {
         _currentState = GameState.Exploration;
-        //explorationCamera.Priority = 11;
     }
 
     private void Update()
@@ -28,16 +31,18 @@ public class GameModeManager : MonoBehaviour
             EnterExploration();
         }
         
-        else if (_currentState == GameState.Exploration)
-        {
-            
-        }
+        // else if (_currentState == GameState.Exploration)
+        // {
+        //     
+        // }
     }
 
     public void EnterExploration()
     {
         _currentState = GameState.Exploration;
         playerController.enabled = true;
+        
+        uiManager.ShowUI(GameState.Exploration);
 
         explorationCamera.Priority = 10;
         shooterCamera.Priority = 0;
@@ -47,6 +52,8 @@ public class GameModeManager : MonoBehaviour
     {
         _currentState = GameState.Shooting;
         playerController.enabled = false;
+        
+        uiManager.ShowUI(GameState.Shooting);
         
         explorationCamera.Priority = 0;
         shooterCamera.Priority = 10;

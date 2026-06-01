@@ -1,16 +1,34 @@
+using System;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject explorationUI;
+    [SerializeField] private GameObject shootingUI;
+    [SerializeField] private GameObject fishingUI;
 
-    // Update is called once per frame
-    void Update()
+    public void ShowUI(GameState state)
     {
-        
+        explorationUI.SetActive(false);
+        shootingUI.SetActive(false);
+        fishingUI.SetActive(false);
+
+        switch(state)
+        {
+            case GameState.Exploration:
+                explorationUI?.SetActive(true);
+                break;
+
+            case GameState.Shooting:
+                shootingUI?.SetActive(true);
+                break;
+
+            case GameState.Fishing:
+                fishingUI?.SetActive(true);
+                break;
+            
+            default:
+                throw new ArgumentOutOfRangeException(nameof(state), state, null);
+        }
     }
 }
