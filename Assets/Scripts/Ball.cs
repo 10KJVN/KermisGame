@@ -30,6 +30,7 @@ public class Ball : MonoBehaviour, IThrowable
         Instantiate(_poofPrefab, col.contacts[0].point, Quaternion.Euler(col.contacts[0].normal));
         _source.clip = _clips[Random.Range(0, _clips.Length)];
         _source.Play();
+        GetComponent<ObjectDestroyer>()?.DestroySelf();
     }
 
     // Just launches in the direction of your POV.
