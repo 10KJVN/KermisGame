@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3524611337184453088}
   - component: {fileID: 7606136369500099740}
   - component: {fileID: 8213647241430736081}
+  - component: {fileID: 4881528707619714862}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -157,3 +158,16 @@ MonoBehaviour:
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+--- !u!114 &4881528707619714862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6412624408908969159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Target
+  points: 100

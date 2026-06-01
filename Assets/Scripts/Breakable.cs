@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class Breakable : MonoBehaviour {
+public class Breakable : MonoBehaviour 
+{
     [SerializeField] private GameObject _replacement;
     [SerializeField] private float _breakForce = 2;
     [SerializeField] private float _collisionMultiplier = 100;
@@ -9,7 +10,10 @@ public class Breakable : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) 
     {
         if (_broken) return;
-        if (collision.relativeVelocity.magnitude >= _breakForce) {
+        if (collision.relativeVelocity.magnitude >= _breakForce) 
+        {
+            GetComponent<Target>()?.AwardPoints();
+            
             _broken = true;
             var replacement = Instantiate(_replacement, transform.position, transform.rotation);
 
