@@ -22,7 +22,14 @@ public class Breakable : MonoBehaviour
                 rb.AddExplosionForce(collision.relativeVelocity.magnitude * _collisionMultiplier, collision.contacts[0].point, 2);
             }
 
+            replacement.GetComponent<ObjectDestroyer>()?.DestroySelf();
             gameObject.SetActive(false);
         }
+    }
+    
+    public void ResetTarget()
+    {
+        _broken = false;
+        gameObject.SetActive(true);
     }
 }

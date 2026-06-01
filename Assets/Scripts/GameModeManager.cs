@@ -13,6 +13,7 @@ public class GameModeManager : MonoBehaviour
     [SerializeField] private UIManager uiManager;
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private MinigameTimer minigameTimer;
+    [SerializeField] private ShootingSession shootingSession;
     
     [Header("Camera References")]
     [SerializeField] private CinemachineFreeLook explorationCamera;
@@ -30,7 +31,7 @@ public class GameModeManager : MonoBehaviour
         if (_currentState == GameState.Shooting &&
             Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log($"Final Score: {scoreManager.GetScore()}");
+            Debug.Log($"You left early");
             EnterExploration();
         }
         
@@ -57,7 +58,8 @@ public class GameModeManager : MonoBehaviour
     {
         _currentState = GameState.Shooting;
         playerController.enabled = false;
-        
+
+        shootingSession.ResetTargets();
         scoreManager.ResetScore();
         minigameTimer.StartTimer();
         

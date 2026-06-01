@@ -2665,6 +2665,7 @@ MonoBehaviour:
   uiManager: {fileID: 2135464255}
   scoreManager: {fileID: 754907004}
   minigameTimer: {fileID: 236238257}
+  shootingSession: {fileID: 1878538667}
   explorationCamera: {fileID: 686208959}
   shooterCamera: {fileID: 1117824556}
 --- !u!4 &955870467
@@ -2682,6 +2683,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1601591833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &976995773 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8213647241430736081, guid: de21e61ad3410a647b25225374f4aa5a, type: 3}
+  m_PrefabInstance: {fileID: 1978213358}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f21980d37f6af4995fffe9b62d7089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Breakable
 --- !u!1 &1015122205 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7694699354288834289, guid: 230bfa17801904d469f735c9bf04980c, type: 3}
@@ -3992,6 +4004,7 @@ Transform:
   m_Children:
   - {fileID: 955870467}
   - {fileID: 2135464256}
+  - {fileID: 1878538666}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1603419963
@@ -4849,6 +4862,52 @@ MonoBehaviour:
   label: {fileID: 2071514738}
   worldOffset: {x: 0, y: 1, z: 0}
   keyHint: '[E]'
+--- !u!1 &1878538665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1878538666}
+  - component: {fileID: 1878538667}
+  m_Layer: 0
+  m_Name: Shooting Session
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1878538666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878538665}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1601591833}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878538667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878538665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cac6b4666d009a4ebf1216ee4223c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShootingSession
+  targets:
+  - {fileID: 976995773}
 --- !u!1 &1887932914
 GameObject:
   m_ObjectHideFlags: 0
@@ -4990,7 +5049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8213647241430736081, guid: de21e61ad3410a647b25225374f4aa5a, type: 3}
       propertyPath: _breakForce
-      value: 0.03
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -573,6 +573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6570663380032227721}
+  - component: {fileID: 1720577106348827277}
   m_Layer: 0
   m_Name: Star Broken
   m_TagString: Untagged
@@ -600,6 +601,19 @@ Transform:
   - {fileID: 578754187129087404}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &1720577106348827277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5430857959994830090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e0ea1c3034356d4480f19ff86e52231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectDestroyer
+  delay: 3
 --- !u!1 &8242322538753067199
 GameObject:
   m_ObjectHideFlags: 0
