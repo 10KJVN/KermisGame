@@ -2663,8 +2663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameModeManager
   playerController: {fileID: 6367434802216440563}
   uiManager: {fileID: 2135464255}
-  scoreManager: {fileID: 0}
-  minigameTimer: {fileID: 0}
+  scoreManager: {fileID: 754907004}
+  minigameTimer: {fileID: 236238257}
   explorationCamera: {fileID: 686208959}
   shooterCamera: {fileID: 1117824556}
 --- !u!4 &955870467
