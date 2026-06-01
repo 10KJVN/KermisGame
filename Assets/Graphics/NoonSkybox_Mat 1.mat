@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UberSkybox_Mat
+  m_Name: NoonSkybox_Mat 1
   m_Shader: {fileID: -6465566751694194690, guid: 3e485313551c5aa4ea1b7a515e11147b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,30 +42,30 @@ Material:
     - _AlphaClip: 0.5
     - _BUILTIN_QueueControl: -1
     - _BUILTIN_QueueOffset: 0
-    - _BlendHeight: 0
-    - _CloudDensity: 0.5
-    - _CloudIntensity: 1
-    - _CloudScale: 100
-    - _CloudScatter: 0.1
+    - _BlendHeight: 1
+    - _CloudDensity: 1
+    - _CloudIntensity: 0.5
+    - _CloudScale: 500
+    - _CloudScatter: 1
     - _CloudsAlpha: 0
     - _CloudsPower: 0
     - _DistortScale: 50
-    - _HorizonBlend: 1
-    - _NadirBlend: 0.1
+    - _HorizonBlend: 1.05
+    - _NadirBlend: 0.095
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SunIntensity: 0.1
     - _SunSize: 1
     - _VertexOffset: 0.05
-    - _ZenithBlend: 0.2
+    - _ZenithBlend: 0.25
     m_Colors:
-    - _CloudSpeed: {r: 0.01, g: 0.01, b: 0, a: 0}
+    - _CloudSpeed: {r: 0.04, g: 0.07, b: 0, a: 0}
     - _CloudsColor: {r: 4, g: 4, b: 4, a: 1}
     - _DistortSpeed: {r: 0, g: 0, b: 0, a: 0}
-    - _GroundColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _HorizonColor: {r: 0.6901961, g: 0.7764706, b: 0.8117647, a: 1}
+    - _GroundColor: {r: 0.19999993, g: 0.14117648, b: 0.23921569, a: 1}
+    - _HorizonColor: {r: 0.87058824, g: 0.41960785, b: 0.53333336, a: 1}
     - _MainLightDirection: {r: 0.16636492, g: -0.76604426, b: 0.6208856, a: 0}
-    - _SkyColor: {r: 0.4509804, g: 0.5764706, b: 0.7019608, a: 1}
+    - _SkyColor: {r: 0.29411766, g: 0.48235294, b: 0.61960787, a: 1}
     - _SunColor: {r: 7.937255, g: 5.772549, b: 0.5960785, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

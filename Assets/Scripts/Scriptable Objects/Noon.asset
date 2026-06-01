@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AtmospherePreset
   sunIntensity: 1
   sunSize: 0.1
-  zenithColor: {r: 0, g: 0, b: 1, a: 1}
-  horizonColor: {r: 0, g: 1, b: 1, a: 1}
-  nadirColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  zenithColor: {r: 0.12156863, g: 0.23921569, b: 0.36078432, a: 1}
+  horizonColor: {r: 0.98039216, g: 0.8156863, b: 0.76862746, a: 1}
+  nadirColor: {r: 0.2, g: 0.14117648, b: 0.23921569, a: 1}
   cloudScatter: 0.5
   cloudDensity: 0.3
   panSpeed: {x: 0, y: 0}
-  fogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  fogDensity: 0.02
+  fogColor: {r: 0.99607843, g: 0.9882353, b: 1, a: 1}
+  fogDensity: 0.2
   cloudPower: 1
   cloudSpeed: {x: 0, y: 0}
   volumeProfile: {fileID: 11400000, guid: ab09877e2e707104187f6f83e2f62510, type: 2}
