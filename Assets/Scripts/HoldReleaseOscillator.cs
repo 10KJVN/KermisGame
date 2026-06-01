@@ -1,6 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class HoldReleaseOscillator : MonoBehaviour
 {
@@ -18,6 +18,10 @@ public class HoldReleaseOscillator : MonoBehaviour
     public Vector3 fixedDirection = Vector3.forward;
     [Tooltip("This property only applies to MouseWorld")]
     [SerializeField] private float maxDistance = 100f;
+    
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource gunAudioSource;
+    [SerializeField] private AudioClip gunShotClip;
     
     [Header("Trajectory Settings")]
     public LineRenderer trajectoryLine;
@@ -76,6 +80,9 @@ public class HoldReleaseOscillator : MonoBehaviour
     {
         if (!projectilePrefab || !spawnPoint) return;
 
+        gunAudioSource.pitch = Random.Range(0.95f, 1.05f);
+        gunAudioSource.PlayOneShot(gunShotClip);
+        
         GameObject proj = Instantiate(projectilePrefab, spawnPoint.position, spawnPoint.rotation);
         Rigidbody rb = proj.GetComponent<Rigidbody>();
         if (!rb) return;

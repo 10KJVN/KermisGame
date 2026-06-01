@@ -3,6 +3,7 @@ using UnityEngine;
 public class Breakable : MonoBehaviour 
 {
     [SerializeField] private GameObject _replacement;
+    [SerializeField] private AudioClip breakClip;
     [SerializeField] private float _breakForce = 2;
     [SerializeField] private float _collisionMultiplier = 100;
     [SerializeField] private bool _broken;
@@ -21,6 +22,8 @@ public class Breakable : MonoBehaviour
             foreach (var rb in rbs) {
                 rb.AddExplosionForce(collision.relativeVelocity.magnitude * _collisionMultiplier, collision.contacts[0].point, 2);
             }
+            
+            AudioSource.PlayClipAtPoint(breakClip, transform.position);
 
             replacement.GetComponent<ObjectDestroyer>()?.DestroySelf();
             gameObject.SetActive(false);
