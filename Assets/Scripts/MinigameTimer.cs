@@ -44,6 +44,6 @@ public class MinigameTimer : MonoBehaviour
     private void UpdateUI()
     {
         if (timerText)
-            timerText.text = $"Time: {Mathf.CeilToInt(_remainingTime)}";
+            timerText.text = $"TIME: {Mathf.CeilToInt(_remainingTime)}";
     }
 }
