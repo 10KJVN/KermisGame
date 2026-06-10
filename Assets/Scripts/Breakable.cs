@@ -1,30 +1,20 @@
 using UnityEngine;
 
-public class Breakable : MonoBehaviour, IHittable, IResettable
+public class Breakable : MonoBehaviour, IResettable
 {
     [SerializeField] private GameObject _replacement;
     [SerializeField] private AudioClip _breakClip;
+    [SerializeField] private int points = 100;
     [SerializeField] private float _breakForce = 2;
     [SerializeField] private float _collisionMultiplier = 100;
     [SerializeField] private bool _broken;
 
-    // Optional: use a HitReaction for scoring & effects
-    [SerializeField] private HitReaction _hitReaction;
-
-    public void OnHit(Collision collision, Ball ball)
+    public void OnCollisionEnter(Collision collision)
     {
         if (_broken) return;
         if (collision.relativeVelocity.magnitude >= _breakForce)
         {
-            // If a HitReaction is present, let it handle scoring + VFX/SFX
-            if (_hitReaction != null)
-            {
-                _hitReaction.OnHit(collision, ball);
-            }
-            else
-            {
-                ScoreManager.Instance?.AddScore(100); // fallback
-            }
+            ScoreManager.Instance?.AddScore(points);
 
             _broken = true;
             var replacement = Instantiate(_replacement, transform.position, transform.rotation);
@@ -35,8 +25,7 @@ public class Breakable : MonoBehaviour, IHittable, IResettable
                 rb.AddExplosionForce(collision.relativeVelocity.magnitude * _collisionMultiplier,
                     collision.contacts[0].point, 2);
             }
-
-            // If you have an AudioSource on this object, play break sound
+            
             AudioSource.PlayClipAtPoint(_breakClip, transform.position);
 
             replacement.GetComponent<ObjectDestroyer>()?.DestroySelf();

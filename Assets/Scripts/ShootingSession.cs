@@ -15,8 +15,7 @@ public class ShootingSession : MonoBehaviour
         foreach (var targetObj in allTargets)
         {
             var resettable = targetObj.GetComponent<IResettable>();
-            if (resettable != null)
-                resettable.ResetTarget();
+            resettable?.ResetTarget();
         }
     }
 }

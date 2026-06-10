@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6023794142853421203}
   - component: {fileID: 2351525545329998298}
   - component: {fileID: 6642147808552706795}
-  - component: {fileID: 9053801634651426555}
   - component: {fileID: 5373809809215355417}
+  - component: {fileID: 1241344225208991540}
   m_Layer: 0
   m_Name: ShootableTarget
   m_TagString: Untagged
@@ -92,19 +92,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &9053801634651426555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1970291128738196676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 300
 --- !u!135 &5373809809215355417
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -126,3 +113,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.0015
   m_Center: {x: -0.0000000018626451, y: 0, z: 0}
+--- !u!114 &1241344225208991540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970291128738196676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b995167cc4f54cb2b5dfcee36cc71160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReaction
+  points: 300
+  hitVFXPrefab: {fileID: 0}
+  hitSFX: {fileID: 0}
+  sfxVolume: 1
+  deactivateAfterHit: 1
