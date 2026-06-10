@@ -156,10 +156,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &4455578826172902109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,10 +427,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &7689736841447315841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,10 +762,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &3360285889527319988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,10 +1033,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &4698696272566062595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,7 +1162,6 @@ GameObject:
   - component: {fileID: 537203585928259399}
   - component: {fileID: 6494087229746380806}
   - component: {fileID: 434132805988777252}
-  - component: {fileID: 142479981757886400}
   - component: {fileID: 7507782657805939827}
   m_Layer: 0
   m_Name: Star
@@ -1300,23 +1303,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
---- !u!114 &142479981757886400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880743815460189813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 100
+  _hitReaction: {fileID: 0}
 --- !u!82 &7507782657805939827
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1570,10 +1561,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &6287452577198382232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1840,10 +1832,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1381546666922747458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,10 +2103,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1897969308606277665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,10 +2374,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &2801453308433633426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2650,10 +2645,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 0}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &7213293506163944608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2920,10 +2916,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &6761525451351263958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3190,10 +3187,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1234921668918362478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3460,10 +3458,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &2663028212694079856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3730,10 +3729,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1834460626025593570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4000,10 +4000,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1064287723894318274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4270,10 +4271,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1808861879836809244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4540,10 +4542,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &2313369155220403185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4810,10 +4813,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &7296123882001802169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5080,10 +5084,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &7853571901310924892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5350,10 +5355,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &7947601838419968527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5620,10 +5626,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &6940769553398320213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5890,10 +5897,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &2572491571392947749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6160,10 +6168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1512445656987950919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6430,10 +6439,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1366616115054452392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6700,10 +6710,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &8052595646913279862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6970,10 +6981,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1910037234565144201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7240,10 +7252,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1903675838017750626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7510,10 +7523,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &5060062790271494936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7780,10 +7794,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &1504673422765049937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8050,10 +8065,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &5827606740681004597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8320,10 +8336,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &9041854915106926520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8590,10 +8607,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &8095515993952427593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8860,10 +8878,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
+  _hitReaction: {fileID: 0}
 --- !u!114 &663864035421146232
 MonoBehaviour:
   m_ObjectHideFlags: 0

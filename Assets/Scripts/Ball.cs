@@ -27,6 +27,15 @@ public class Ball : MonoBehaviour, IThrowable
     public void OnCollisionEnter(Collision col)
     {
         if (_isGhost) return;
+
+        // Notify the hit object
+        IHittable hittable = col.gameObject.GetComponent<IHittable>();
+        if (hittable != null)
+        {
+            hittable.OnHit(col, this);
+        }
+
+        // Ball's own death effects (poof, sound, destroy)
         Instantiate(_poofPrefab, col.contacts[0].point, Quaternion.Euler(col.contacts[0].normal));
         _source.clip = _clips[Random.Range(0, _clips.Length)];
         _source.Play();
