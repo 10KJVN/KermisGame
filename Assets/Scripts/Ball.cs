@@ -32,7 +32,7 @@ public class Ball : MonoBehaviour, IThrowable
         IHittable hittable = col.gameObject.GetComponent<IHittable>();
         hittable?.OnHit(col, this);
 
-        // Ball's own death effects (poof, sound, destroy)
+        // Ball death effects (poof, sound, destroy)
         Instantiate(_poofPrefab, col.contacts[0].point, Quaternion.Euler(col.contacts[0].normal));
         _source.clip = _clips[Random.Range(0, _clips.Length)];
         _source.Play();

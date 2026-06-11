@@ -5,9 +5,9 @@ public class HitReaction : MonoBehaviour, IHittable, IResettable
     [Header("Scoring")]
     [SerializeField] private int points = 100;
 
-    [Header("VFX & SFX")]
-    [SerializeField] private GameObject hitVFXPrefab;   // optional
-    [SerializeField] private AudioClip hitSFX;          // optional
+    [Header("Visual & Sound Effects")]
+    [SerializeField] private GameObject hitVFXPrefab; // optional
+    [SerializeField] private AudioClip hitSFX; // optional
     [SerializeField] private float sfxVolume = 1f;
 
     [Header("Behaviour")]
