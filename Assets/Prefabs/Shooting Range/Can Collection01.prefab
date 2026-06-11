@@ -48,9 +48,9 @@ GameObject:
   - component: {fileID: 5275801364543689726}
   - component: {fileID: 6818668266641200591}
   - component: {fileID: 7060785186915007562}
-  - component: {fileID: 4895860687319446250}
   - component: {fileID: 8325693600011614716}
   - component: {fileID: 8245737434652841893}
+  - component: {fileID: 8526323047310271275}
   m_Layer: 0
   m_Name: Cylinder.002
   m_TagString: Untagged
@@ -130,19 +130,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4895860687319446250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2782885020486346184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 50
 --- !u!54 &8325693600011614716
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -191,6 +178,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.019999998, z: 0.021786006}
   m_Center: {x: 0, y: 6.34518e-18, z: 0.00089301204}
+--- !u!114 &8526323047310271275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2782885020486346184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b995167cc4f54cb2b5dfcee36cc71160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReaction
+  points: 50
+  hitVFXPrefab: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: 67a88e2fd74b3e54b8a1289afc055163, type: 3}
+  sfxVolume: 1
+  deactivateAfterHit: 1
 --- !u!1 &2844375498471607406
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,9 +206,9 @@ GameObject:
   - component: {fileID: 5368541270556735795}
   - component: {fileID: 2092807712503516074}
   - component: {fileID: 196469394182181573}
-  - component: {fileID: 185494838624306647}
   - component: {fileID: 4247811301546829051}
   - component: {fileID: 4965035937135925112}
+  - component: {fileID: 61585483020508768}
   m_Layer: 0
   m_Name: Cylinder.004
   m_TagString: Untagged
@@ -284,19 +288,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &185494838624306647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2844375498471607406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 50
 --- !u!54 &4247811301546829051
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -345,6 +336,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.019999998, z: 0.021786006}
   m_Center: {x: 0, y: 6.34518e-18, z: 0.00089301204}
+--- !u!114 &61585483020508768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844375498471607406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b995167cc4f54cb2b5dfcee36cc71160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReaction
+  points: 50
+  hitVFXPrefab: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: 67a88e2fd74b3e54b8a1289afc055163, type: 3}
+  sfxVolume: 1
+  deactivateAfterHit: 1
 --- !u!1 &3586985126886381200
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,9 +364,9 @@ GameObject:
   - component: {fileID: 7420917360833814530}
   - component: {fileID: 6656555461388114809}
   - component: {fileID: 7204201260744558322}
-  - component: {fileID: 1466792170326284326}
   - component: {fileID: 7602085734943602281}
   - component: {fileID: 3949457615266910471}
+  - component: {fileID: 4109024533122770787}
   m_Layer: 0
   m_Name: Cylinder.001
   m_TagString: Untagged
@@ -438,19 +446,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1466792170326284326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3586985126886381200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 50
 --- !u!54 &7602085734943602281
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -499,6 +494,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.019999998, z: 0.021786006}
   m_Center: {x: 0, y: 6.34518e-18, z: 0.00089301204}
+--- !u!114 &4109024533122770787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3586985126886381200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b995167cc4f54cb2b5dfcee36cc71160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReaction
+  points: 50
+  hitVFXPrefab: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: 67a88e2fd74b3e54b8a1289afc055163, type: 3}
+  sfxVolume: 1
+  deactivateAfterHit: 1
 --- !u!1 &3742427400784626808
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,9 +522,9 @@ GameObject:
   - component: {fileID: 5944766067413906569}
   - component: {fileID: 7322620510672300126}
   - component: {fileID: 1780564332991776111}
-  - component: {fileID: 8325361380431231188}
   - component: {fileID: 6951261092332555700}
   - component: {fileID: 5288176883171903303}
+  - component: {fileID: 3939909348291671814}
   m_Layer: 0
   m_Name: Cylinder.027
   m_TagString: Untagged
@@ -592,19 +604,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8325361380431231188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3742427400784626808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 50
 --- !u!54 &6951261092332555700
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -653,6 +652,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.019999998, z: 0.021786006}
   m_Center: {x: 0, y: 6.34518e-18, z: 0.0008930046}
+--- !u!114 &3939909348291671814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3742427400784626808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b995167cc4f54cb2b5dfcee36cc71160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReaction
+  points: 50
+  hitVFXPrefab: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: 67a88e2fd74b3e54b8a1289afc055163, type: 3}
+  sfxVolume: 1
+  deactivateAfterHit: 1
 --- !u!1 &3748778704740824432
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,9 +680,9 @@ GameObject:
   - component: {fileID: 87824841190610173}
   - component: {fileID: 4233218243884944157}
   - component: {fileID: 4881249689377159634}
-  - component: {fileID: 8814194986922201126}
   - component: {fileID: 6327690520344191829}
   - component: {fileID: 4697127592885970841}
+  - component: {fileID: 9152296252484634266}
   m_Layer: 0
   m_Name: Cylinder.005
   m_TagString: Untagged
@@ -746,19 +762,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8814194986922201126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3748778704740824432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 50
 --- !u!54 &6327690520344191829
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -807,6 +810,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.019999998, z: 0.021786006}
   m_Center: {x: -0.000000007450581, y: 6.34518e-18, z: 0.0008930195}
+--- !u!114 &9152296252484634266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748778704740824432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b995167cc4f54cb2b5dfcee36cc71160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReaction
+  points: 50
+  hitVFXPrefab: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: 67a88e2fd74b3e54b8a1289afc055163, type: 3}
+  sfxVolume: 1
+  deactivateAfterHit: 1
 --- !u!1 &7833969662984465485
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,9 +838,9 @@ GameObject:
   - component: {fileID: 584753795090139840}
   - component: {fileID: 6795987108928664728}
   - component: {fileID: 5119678912665151276}
-  - component: {fileID: 3188988243060549424}
   - component: {fileID: 6472054046600439663}
   - component: {fileID: 8239366082115669430}
+  - component: {fileID: 1380711887285433820}
   m_Layer: 0
   m_Name: Cylinder.003
   m_TagString: Untagged
@@ -900,19 +920,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3188988243060549424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7833969662984465485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 50
 --- !u!54 &6472054046600439663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -961,3 +968,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.019999998, z: 0.021786006}
   m_Center: {x: 0, y: 6.34518e-18, z: 0.00089301204}
+--- !u!114 &1380711887285433820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7833969662984465485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b995167cc4f54cb2b5dfcee36cc71160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitReaction
+  points: 50
+  hitVFXPrefab: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: 67a88e2fd74b3e54b8a1289afc055163, type: 3}
+  sfxVolume: 1
+  deactivateAfterHit: 1

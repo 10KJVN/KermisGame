@@ -1,14 +1,16 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ShootingSession : MonoBehaviour
 {
-    [SerializeField] private Breakable[] targets;
+    [SerializeField] private List<GameObject> allTargets;
 
     public void ResetTargets()
     {
-        foreach (Breakable target in targets)
+        foreach (var targetObj in allTargets)
         {
-            target.ResetTarget();
+            var resettable = targetObj.GetComponent<IResettable>();
+            resettable?.ResetTarget();
         }
     }
 }

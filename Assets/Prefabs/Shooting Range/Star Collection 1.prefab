@@ -156,7 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -426,7 +427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -760,7 +762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -888,7 +891,6 @@ GameObject:
   - component: {fileID: 2846206702036779762}
   - component: {fileID: 1336005722733556780}
   - component: {fileID: 19666391123584530}
-  - component: {fileID: 4698696272566062595}
   - component: {fileID: 6293843493609282112}
   m_Layer: 0
   m_Name: BigStar03
@@ -1030,23 +1032,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
---- !u!114 &4698696272566062595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752137238122447348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 200
 --- !u!82 &6293843493609282112
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1158,7 +1148,6 @@ GameObject:
   - component: {fileID: 537203585928259399}
   - component: {fileID: 6494087229746380806}
   - component: {fileID: 434132805988777252}
-  - component: {fileID: 142479981757886400}
   - component: {fileID: 7507782657805939827}
   m_Layer: 0
   m_Name: Star
@@ -1300,23 +1289,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
---- !u!114 &142479981757886400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880743815460189813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 100
 --- !u!82 &7507782657805939827
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1570,7 +1547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -1840,7 +1818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -2110,7 +2089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -2380,7 +2360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -2508,7 +2489,6 @@ GameObject:
   - component: {fileID: 4776356718009571766}
   - component: {fileID: 7049954011922435439}
   - component: {fileID: 6413249185245584856}
-  - component: {fileID: 7213293506163944608}
   - component: {fileID: 4419008966737640913}
   m_Layer: 0
   m_Name: BigStar02
@@ -2650,23 +2630,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 0}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
---- !u!114 &7213293506163944608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3614119661317523194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 200
 --- !u!82 &4419008966737640913
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2920,7 +2888,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -3190,7 +3159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -3460,7 +3430,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -3730,7 +3701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -3858,7 +3830,6 @@ GameObject:
   - component: {fileID: 603742430572436505}
   - component: {fileID: 6493304320017056957}
   - component: {fileID: 5380662665513926775}
-  - component: {fileID: 1064287723894318274}
   - component: {fileID: 6636119273210355997}
   m_Layer: 0
   m_Name: BigStar01
@@ -4000,23 +3971,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
---- !u!114 &1064287723894318274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5368449184712157766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af9da675004ed2843ab3f8f4d498d05c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Target
-  points: 200
 --- !u!82 &6636119273210355997
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4270,7 +4229,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -4540,7 +4500,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -4810,7 +4771,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -5080,7 +5042,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -5350,7 +5313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -5620,7 +5584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -5890,7 +5855,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -6160,7 +6126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -6430,7 +6397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -6700,7 +6668,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -6970,7 +6939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -7240,7 +7210,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -7510,7 +7481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -7780,7 +7752,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -8050,7 +8023,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -8320,7 +8294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -8590,7 +8565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
@@ -8860,7 +8836,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
   _replacement: {fileID: 5430857959994830090, guid: 0a9ce2f4690e9e24484e55256c481aef, type: 3}
-  breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  _breakClip: {fileID: 8300000, guid: 8eb88b87c5928b94db8ab3ae56b60008, type: 3}
+  points: 100
   _breakForce: 2
   _collisionMultiplier: 100
   _broken: 0
