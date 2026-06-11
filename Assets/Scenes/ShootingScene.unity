@@ -27513,6 +27513,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1413245880741956739, guid: b89bc587df4162647b610bb711a62feb, type: 3}
+      propertyPath: oscillationSpeed
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413245880741956739, guid: b89bc587df4162647b610bb711a62feb, type: 3}
       propertyPath: trajectoryResolution
       value: 5
       objectReference: {fileID: 0}
