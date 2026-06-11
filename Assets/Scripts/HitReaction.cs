@@ -15,22 +15,18 @@ public class HitReaction : MonoBehaviour, IHittable, IResettable
 
     public void OnHit(Collision collision, Ball ball)
     {
-        // Award points
         ScoreManager.Instance?.AddScore(points);
-
-        // Spawn VFX at impact point
-        if (hitVFXPrefab != null)
+        
+        if (hitVFXPrefab)
         {
             Instantiate(hitVFXPrefab, collision.contacts[0].point, Quaternion.identity);
         }
-
-        // Play SFX
-        if (hitSFX != null)
+        
+        if (hitSFX)
         {
             AudioSource.PlayClipAtPoint(hitSFX, transform.position, sfxVolume);
         }
-
-        // Deactivate (or destroy) the target
+        
         if (deactivateAfterHit)
         {
             gameObject.SetActive(false);
