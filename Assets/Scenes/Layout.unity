@@ -1898,10 +1898,6 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b800d484834a04848990e6c8ccbe3fdb, type: 2}
-    - target: {fileID: 4629907929889308633, guid: 8098f966b3a36da4bb7b361d6e92ffd8, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: f763e51187be47e4d9ead1cfb03b9a98, type: 2}
     - target: {fileID: 4649647134584969424, guid: 8098f966b3a36da4bb7b361d6e92ffd8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1910,10 +1906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferris Wheel Parent
       objectReference: {fileID: 0}
-    - target: {fileID: 6205978608901456448, guid: 8098f966b3a36da4bb7b361d6e92ffd8, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 74599f49e7b48534ca22efa9be5174e2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
