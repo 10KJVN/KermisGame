@@ -51,4 +51,11 @@ public class DialogueManager : MonoBehaviour
         textManager.TextRequest(1, "Maybe that's what matters.", 2);
         textManager.TextRequest(3, "Maybe that's enough.", 5);
     }
+
+    private void Dialogue3()
+    {
+        textManager.TextRequest(4, "It might have been the last day.", 2);
+        textManager.TextRequest(1, "But it was a good one at-", 2);
+        textManager.TextRequest(2, "THE KERMIS", 2); // Make this an actual pop up anim or something.
+    }
 }
