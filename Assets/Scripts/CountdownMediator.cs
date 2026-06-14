@@ -2,6 +2,9 @@ using UnityEngine;
 using ImprovedTimers;
 using TMPro;
 
+/// <summary>
+/// Class can be deleted once all references are gone.
+/// </summary>
 public class CountdownMediator : MonoBehaviour
 {
     [SerializeField] private float duration = 30f;

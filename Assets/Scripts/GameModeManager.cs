@@ -12,8 +12,9 @@ public class GameModeManager : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private UIManager uiManager;
     [SerializeField] private ScoreManager scoreManager;
-    [SerializeField] private MinigameTimer minigameTimer;
     [SerializeField] private ShootingSession shootingSession;
+    [SerializeField] private ShootingTimerController shootingTimer;
+    [SerializeField] private HoldReleaseOscillator holdReleaseOscillator;
     
     [Header("Camera References")]
     [SerializeField] private CinemachineFreeLook explorationCamera;
@@ -24,6 +25,11 @@ public class GameModeManager : MonoBehaviour
     private void Start()
     {
         _currentState = GameState.Exploration;
+        
+        if (_currentState == GameState.Exploration)
+        {
+            holdReleaseOscillator.enabled = false;
+        }
     }
 
     private void Update()
@@ -34,11 +40,6 @@ public class GameModeManager : MonoBehaviour
             Debug.Log($"You left early");
             EnterExploration();
         }
-        
-        // else if (_currentState == GameState.Exploration)
-        // {
-        //     
-        // }
     }
 
     public void EnterExploration()
@@ -46,8 +47,13 @@ public class GameModeManager : MonoBehaviour
         _currentState = GameState.Exploration;
         playerController.enabled = true;
         
+        holdReleaseOscillator.enabled = false;
+        holdReleaseOscillator.ResetCharge();
+        
+        var pmui = FindFirstObjectByType<PowerMeterUI>();
+        if (pmui != null) pmui.ForceHideSlider();
+        
         Debug.Log($"Final Score: {scoreManager.GetScore()}");
-        minigameTimer.StopTimer();
         uiManager.ShowUI(GameState.Exploration);
 
         explorationCamera.Priority = 10;
@@ -58,10 +64,11 @@ public class GameModeManager : MonoBehaviour
     {
         _currentState = GameState.Shooting;
         playerController.enabled = false;
+        holdReleaseOscillator.enabled = true;
 
         shootingSession.ResetTargets();
         scoreManager.ResetScore();
-        minigameTimer.StartTimer();
+        shootingTimer.StartNewRound();
         
         uiManager.ShowUI(GameState.Shooting);
         

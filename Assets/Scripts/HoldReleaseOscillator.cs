@@ -134,4 +134,14 @@ public class HoldReleaseOscillator : MonoBehaviour
         trajectoryLine.SetPositions(points);
     }
     
+    public void ResetCharge()
+    {
+        _isCharging = false;
+        if (trajectoryLine != null)
+        {
+            trajectoryLine.enabled = false;
+            trajectoryLine.positionCount = 0;
+        }
+    }
+
 }
