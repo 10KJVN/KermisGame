@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Handles displaying dialogue using a typewriter effect.
+/// Dialogue requests are queued and processed sequentially.
+/// Useful for simple narrative text sequences.
+/// </summary>
 public class TextManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text textBox;
