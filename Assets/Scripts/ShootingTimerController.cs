@@ -24,6 +24,7 @@ public class ShootingTimerController : MonoBehaviour
     [SerializeField] private GameModeManager gameModeManager;
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private HoldReleaseOscillator holdReleaseOscillator;
+    [SerializeField] private PowerMeterUI powerMeterUI;
 
     private CountdownTimer _timer;
     private Camera _mainCamera;
@@ -51,8 +52,11 @@ public class ShootingTimerController : MonoBehaviour
         if (holdReleaseOscillator != null)
         {
             holdReleaseOscillator.ResetCharge();
-            holdReleaseOscillator.enabled = true;   // ensure it's active
+            holdReleaseOscillator.enabled = true;
         }
+        
+        if (powerMeterUI != null)
+            powerMeterUI.ForceHideSlider();
         
         _timer = new CountdownTimer(roundDuration);
         _timer.OnTimerStop += OnTimerFinished;
@@ -93,6 +97,10 @@ public class ShootingTimerController : MonoBehaviour
             holdReleaseOscillator.ResetCharge();
             holdReleaseOscillator.enabled = false;
         }
+        
+        // Force hide the slider
+        if (powerMeterUI != null)
+            powerMeterUI.ForceHideSlider();
         
         foreach (GameObject uiElem in uiElementsToHide)
         {

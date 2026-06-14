@@ -50,6 +50,9 @@ public class GameModeManager : MonoBehaviour
         holdReleaseOscillator.enabled = false;
         holdReleaseOscillator.ResetCharge();
         
+        var pmui = FindFirstObjectByType<PowerMeterUI>();
+        if (pmui != null) pmui.ForceHideSlider();
+        
         Debug.Log($"Final Score: {scoreManager.GetScore()}");
         uiManager.ShowUI(GameState.Exploration);
 

@@ -22,4 +22,9 @@ public class PowerMeterUI : MonoBehaviour
         if (!powerSlider.gameObject.activeSelf)
             powerSlider.gameObject.SetActive(true);
     }
+
+    public void ForceHideSlider()
+    {
+        powerSlider.gameObject.SetActive(false);
+    }
 }

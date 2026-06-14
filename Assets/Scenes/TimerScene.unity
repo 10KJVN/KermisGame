@@ -802,6 +802,7 @@ MonoBehaviour:
   gameModeManager: {fileID: 955870466}
   scoreManager: {fileID: 754907004}
   holdReleaseOscillator: {fileID: 929317226}
+  powerMeterUI: {fileID: 1691610763}
 --- !u!1 &174149011
 GameObject:
   m_ObjectHideFlags: 0
@@ -6925,6 +6926,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 55260611926519111, guid: c67e2824dd8e16c48bcfa859f97d5d1d, type: 3}
   m_PrefabInstance: {fileID: 2742895468896128698}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1691610763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 653948435458104616, guid: f72b86bd275df9e47ac792f1d69a8db6, type: 3}
+  m_PrefabInstance: {fileID: 3128494556124570263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a5203aef4ec2540952176937f52b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerMeterUI
 --- !u!1 &1717724002 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5428610922747314279, guid: 613ab47a9bbe9144fa81d08281ef9dd7, type: 3}
@@ -32859,7 +32871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4993396533352214600, guid: f72b86bd275df9e47ac792f1d69a8db6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4993396533352214600, guid: f72b86bd275df9e47ac792f1d69a8db6, type: 3}
       propertyPath: m_AnchorMin.x
@@ -32967,7 +32979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8617742157663805744, guid: f72b86bd275df9e47ac792f1d69a8db6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
