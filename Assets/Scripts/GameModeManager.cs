@@ -14,6 +14,7 @@ public class GameModeManager : MonoBehaviour
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private ShootingSession shootingSession;
     [SerializeField] private ShootingTimerController shootingTimer;
+    [SerializeField] private HoldReleaseOscillator holdReleaseOscillator;
     
     [Header("Camera References")]
     [SerializeField] private CinemachineFreeLook explorationCamera;
@@ -24,6 +25,11 @@ public class GameModeManager : MonoBehaviour
     private void Start()
     {
         _currentState = GameState.Exploration;
+        
+        if (_currentState == GameState.Exploration)
+        {
+            holdReleaseOscillator.enabled = false;
+        }
     }
 
     private void Update()
@@ -41,6 +47,9 @@ public class GameModeManager : MonoBehaviour
         _currentState = GameState.Exploration;
         playerController.enabled = true;
         
+        holdReleaseOscillator.enabled = false;
+        holdReleaseOscillator.ResetCharge();
+        
         Debug.Log($"Final Score: {scoreManager.GetScore()}");
         uiManager.ShowUI(GameState.Exploration);
 
@@ -52,6 +61,7 @@ public class GameModeManager : MonoBehaviour
     {
         _currentState = GameState.Shooting;
         playerController.enabled = false;
+        holdReleaseOscillator.enabled = true;
 
         shootingSession.ResetTargets();
         scoreManager.ResetScore();

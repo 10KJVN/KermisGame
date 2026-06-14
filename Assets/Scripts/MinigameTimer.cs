@@ -1,7 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-
+/// <summary>
+/// Class can be deleted once all references are gone.
+/// </summary>
 public class MinigameTimer : MonoBehaviour
 {
     public UnityEvent onTimerFinished;

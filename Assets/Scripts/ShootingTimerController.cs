@@ -11,6 +11,7 @@ public class ShootingTimerController : MonoBehaviour
     [SerializeField] private TMP_Text finalScoreText;
     [SerializeField] private Button retryButton;
     [SerializeField] private Button continueButton;
+    [SerializeField] private GameObject[] uiElementsToHide;
 
     [Header("Timer Settings")]
     [SerializeField] private float roundDuration = 30f;
@@ -22,6 +23,7 @@ public class ShootingTimerController : MonoBehaviour
     [Header("External References")]
     [SerializeField] private GameModeManager gameModeManager;
     [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private HoldReleaseOscillator holdReleaseOscillator;
 
     private CountdownTimer _timer;
     private Camera _mainCamera;
@@ -38,7 +40,6 @@ public class ShootingTimerController : MonoBehaviour
         _mainCamera = Camera.main;
     }
 
-    // Called by GameModeManager when entering shooting mode
     public void StartNewRound()
     {
         if (_timer != null)
@@ -47,11 +48,20 @@ public class ShootingTimerController : MonoBehaviour
             _timer.Dispose();
         }
         
+        if (holdReleaseOscillator != null)
+        {
+            holdReleaseOscillator.ResetCharge();
+            holdReleaseOscillator.enabled = true;   // ensure it's active
+        }
+        
         _timer = new CountdownTimer(roundDuration);
         _timer.OnTimerStop += OnTimerFinished;
         _timer.Start();
         
         if (endScreenPanel) endScreenPanel.SetActive(false);
+        foreach (GameObject uiElem in uiElementsToHide)
+            if (uiElem) uiElem.SetActive(true);
+        if (timerText) timerText.gameObject.SetActive(true);
     }
 
     private void Update()
@@ -76,8 +86,22 @@ public class ShootingTimerController : MonoBehaviour
             if (finalScoreText) finalScoreText.text = $"FINAL SCORE: {finalScore}";
             endScreenPanel.SetActive(true);
         }
+        
+        // Force hide trajectory line
+        if (holdReleaseOscillator != null)
+        {
+            holdReleaseOscillator.ResetCharge();
+            holdReleaseOscillator.enabled = false;
+        }
+        
+        foreach (GameObject uiElem in uiElementsToHide)
+        {
+            if (uiElem) uiElem.SetActive(false);
+        }
+        if (timerText) timerText.gameObject.SetActive(false);
 
-        // TODO: disable shooting input (handled by GameModeManager)
+        // Disable shooting input
+        if (holdReleaseOscillator) holdReleaseOscillator.enabled = false;
     }
 
     private void OnRetryClicked()

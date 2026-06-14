@@ -423,6 +423,11 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
+--- !u!1 &52415909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2230150418736209268, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
+  m_PrefabInstance: {fileID: 3942523070604513534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &81330658
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,11 +792,16 @@ MonoBehaviour:
   finalScoreText: {fileID: 403302379}
   retryButton: {fileID: 648458907}
   continueButton: {fileID: 1609188070}
+  uiElementsToHide:
+  - {fileID: 1813795866}
+  - {fileID: 52415909}
+  - {fileID: 207633492}
   roundDuration: 45
   alarmClip: {fileID: 8300000, guid: dd2a42c19a6d0d94f88068b77df3a2c6, type: 3}
   alarmVolume: 1
   gameModeManager: {fileID: 955870466}
   scoreManager: {fileID: 754907004}
+  holdReleaseOscillator: {fileID: 929317226}
 --- !u!1 &174149011
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +940,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &207633492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 614057663348202101, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
+  m_PrefabInstance: {fileID: 3942523070604513534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!135 &223005379
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3215,7 +3230,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 658149122626475278, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
   m_PrefabInstance: {fileID: 3942523070604513534}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 52415909}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c981540638bc3ca44af2742186e58a4c, type: 3}
@@ -3857,7 +3872,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 926117059}
-  - component: {fileID: 926117060}
   m_Layer: 5
   m_Name: EndscreenUI
   m_TagString: Untagged
@@ -3888,22 +3902,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &926117060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926117058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb81047c403d2a147ba3072669cdf35a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EndScreenUI
-  endScreenPanel: {fileID: 1147770101}
-  finalScoreText: {fileID: 1027327651}
-  continueButton: {fileID: 81330660}
-  gameModeManager: {fileID: 955870466}
 --- !u!1 &928516801
 GameObject:
   m_ObjectHideFlags: 3
@@ -4305,6 +4303,7 @@ MonoBehaviour:
   scoreManager: {fileID: 754907004}
   shootingSession: {fileID: 1878538667}
   shootingTimer: {fileID: 163255561}
+  holdReleaseOscillator: {fileID: 929317226}
   explorationCamera: {fileID: 686208959}
   shooterCamera: {fileID: 1117824556}
 --- !u!4 &955870467
@@ -7384,6 +7383,11 @@ RectTransform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2782885020486346184, guid: ce487c8b7fa416d489de7b057a39d93a, type: 3}
   m_PrefabInstance: {fileID: 6314137700832168515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1813795866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6531434829525625567, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
+  m_PrefabInstance: {fileID: 3942523070604513534}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1830281704
 PrefabInstance:
@@ -31820,6 +31824,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1413245880741956739, guid: b89bc587df4162647b610bb711a62feb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413245880741956739, guid: b89bc587df4162647b610bb711a62feb, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 3893334910886711901}
@@ -39068,7 +39076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5695633391738338151, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8073679800993203685, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
       propertyPath: m_Camera
@@ -39083,7 +39091,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2225138262630603191, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 1660674963}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
@@ -73609,6 +73617,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7485303549554658805}
     m_Modifications:
+    - target: {fileID: 2563103331142778159, guid: 58d8151ede55c8b4da4eee34f98eb94c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f763e51187be47e4d9ead1cfb03b9a98, type: 2}
     - target: {fileID: 3748273224168118187, guid: 58d8151ede55c8b4da4eee34f98eb94c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.203953
