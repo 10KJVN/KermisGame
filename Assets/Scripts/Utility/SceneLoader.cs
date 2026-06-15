@@ -39,9 +39,9 @@ public class SceneLoader : MonoBehaviour
         print(CurrentSceneName);
         Time.timeScale = 1;
 
-        if (CurrentSceneName == "NarrativeScene01")
+        if (CurrentSceneName == "Cutscene01")
         {
-            StartCoroutine(IntroSequence());
+            StartCoroutine(TransitionToOutro());
         }
     }
 
@@ -64,10 +64,10 @@ public class SceneLoader : MonoBehaviour
     }
 
     // TODO: Refactor to work for cutscene length.
-    private IEnumerator IntroSequence()
+    private IEnumerator TransitionToOutro()
     {
-        yield return new WaitForSeconds(18);
-        SceneManager.LoadScene("TimerScene");
+        yield return new WaitForSeconds(30);
+        SceneManager.LoadScene("NarrativeScene02");
     }
     
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -84,7 +84,7 @@ public class SceneLoader : MonoBehaviour
     // Hardcoded scene, don't forget to adjust eventually
     private IEnumerator TransitionToGameplay()
     {
-        yield return new WaitForSeconds(18f);
+        yield return new WaitForSeconds(34f);
         SceneManager.LoadScene("TimerScene"); // My gameplay scene for now
     }
     
