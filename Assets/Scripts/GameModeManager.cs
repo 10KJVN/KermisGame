@@ -74,5 +74,7 @@ public class GameModeManager : MonoBehaviour
         
         explorationCamera.Priority = 0;
         shooterCamera.Priority = 10;
+
+        GameProgress.HasPlayedShootingGame = true;
     }
 }
