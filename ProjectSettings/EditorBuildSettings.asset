@@ -6,20 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ShootingScene.unity
-    guid: 171347cac91140348b8257c83315f2ba
-  - enabled: 0
-    path: Assets/Scenes/CinemachineScene.unity
-    guid: 2cefe2e290dd921438280aa95872104b
-  - enabled: 0
-    path: Assets/Scenes/Game.unity
-    guid: b6cef12a71962854fa7068fa215a20ac
-  - enabled: 0
-    path: Assets/Scenes/Level.unity
-    guid: d95f25f707518634bbfc1f0f9cd17a8b
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/NarrativeScene01.unity
+    guid: 05b78e91442ed344586cfdcecb3e52c2
+  - enabled: 1
+    path: Assets/Scenes/TimerScene.unity
+    guid: 4a070a9d3bd28f842a41ecdef342f632
+  - enabled: 1
+    path: Assets/Scenes/Cutscene01.unity
+    guid: b3ee650413dcc33438de6ce67ab33006
+  - enabled: 1
+    path: Assets/Scenes/NarrativeScene02.unity
+    guid: 41ab0cf900637b841baa99081544bf26
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
