@@ -39,10 +39,10 @@ public class SceneLoader : MonoBehaviour
         print(CurrentSceneName);
         Time.timeScale = 1;
 
-        if (CurrentSceneName == "Cutscene01")
-        {
-            StartCoroutine(TransitionToOutro());
-        }
+        // if (CurrentSceneName == "Cutscene01")
+        // {
+        //     StartCoroutine(TransitionToOutro());
+        // }
     }
 
     private void Update()
@@ -62,23 +62,24 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(CurrentSceneName);
     }
-
-    // TODO: Refactor to work for cutscene length.
-    private IEnumerator TransitionToOutro()
-    {
-        yield return new WaitForSeconds(30);
-        SceneManager.LoadScene("NarrativeScene02");
-    }
     
+    // It seems like Start() only works in editor
+    // This method seems more reliable and sure hit for builds.
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("Scene Loaded: " + scene.name);
         Debug.Log("Load Mode: " + mode);
         
-        if (CurrentSceneName == "NarrativeScene01") // My intro scene for now
+        if (CurrentSceneName == "NarrativeScene01")
         {
             StartCoroutine(TransitionToGameplay());
         }
+
+        if (CurrentSceneName == "Cutscene01")
+        {
+            StartCoroutine(TransitionToOutro());
+        }
+        
     }
     
     // Hardcoded scene, don't forget to adjust eventually
@@ -88,4 +89,10 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("TimerScene"); // My gameplay scene for now
     }
     
+    // TODO: Refactor to work for cutscene length.
+    private IEnumerator TransitionToOutro()
+    {
+        yield return new WaitForSeconds(30);
+        SceneManager.LoadScene("NarrativeScene02");
+    }
 }
