@@ -1119,6 +1119,7 @@ Transform:
   - {fileID: 307633199}
   - {fileID: 950292486}
   - {fileID: 8458139133912200300}
+  - {fileID: 1011676508}
   m_Father: {fileID: 8073730211999883913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &745960102
@@ -1644,6 +1645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f21980d37f6af4995fffe9b62d7089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Breakable
+--- !u!4 &1011676508 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c0dcdffe66b3c54409fc28141b841307, type: 3}
+  m_PrefabInstance: {fileID: 1593901210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1078169702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,7 +2542,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 703686136}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c0dcdffe66b3c54409fc28141b841307, type: 3}
       propertyPath: m_LocalScale.x
@@ -2552,15 +2558,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dcdffe66b3c54409fc28141b841307, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.06666
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dcdffe66b3c54409fc28141b841307, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.212566
+      value: -9.962566
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dcdffe66b3c54409fc28141b841307, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.0102
+      value: -10.973629
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dcdffe66b3c54409fc28141b841307, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7062,4 +7068,3 @@ SceneRoots:
   - {fileID: 1117824557}
   - {fileID: 1183272638}
   - {fileID: 3765970979704446750}
-  - {fileID: 1593901210}
