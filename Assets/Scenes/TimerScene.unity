@@ -3044,6 +3044,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 105841852819607233, guid: 2526053d3893d7541acc312d897c4047, type: 3}
   m_PrefabInstance: {fileID: 763839671}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &772428983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4523020504645110218, guid: dbebc7e1cc8298a4790de78826aab5c6, type: 3}
+  m_PrefabInstance: {fileID: 1073562512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &772428988
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772428983}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000006
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &772428989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772428983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36dcb232e264c5bbc5868fdf7db16e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionSystem.Components.Interactable
+  displayName: Enter
+  isEnabled: 1
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2181759935617773938, guid: e02c5946f2c360c489cef0a887ecbaf4, type: 3}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Cutscene01
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &776574429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,7 +3223,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778202779}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e36dcb232e264c5bbc5868fdf7db16e0, type: 3}
   m_Name: 
@@ -3207,7 +3262,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 10, y: 3, z: 10}
   m_Center: {x: -26.5, y: -10.5, z: -0.5}
@@ -4551,7 +4606,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4523020504645110218, guid: dbebc7e1cc8298a4790de78826aab5c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 772428989}
+    - targetCorrespondingSourceObject: {fileID: 4523020504645110218, guid: dbebc7e1cc8298a4790de78826aab5c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 772428988}
   m_SourcePrefab: {fileID: 100100000, guid: dbebc7e1cc8298a4790de78826aab5c6, type: 3}
 --- !u!1 &1074987288
 GameObject:
