@@ -3087,18 +3087,30 @@ MonoBehaviour:
   OnInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2181759935617773938, guid: e02c5946f2c360c489cef0a887ecbaf4, type: 3}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 772428990}
+        m_TargetAssemblyTypeName: FerrisWheelInteraction, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Cutscene01
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &772428990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772428983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd85a5375c21d624082fbc778ab5f78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FerrisWheelInteraction
 --- !u!1 &776574429
 GameObject:
   m_ObjectHideFlags: 0
@@ -4613,6 +4625,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4523020504645110218, guid: dbebc7e1cc8298a4790de78826aab5c6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 772428988}
+    - targetCorrespondingSourceObject: {fileID: 4523020504645110218, guid: dbebc7e1cc8298a4790de78826aab5c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 772428990}
   m_SourcePrefab: {fileID: 100100000, guid: dbebc7e1cc8298a4790de78826aab5c6, type: 3}
 --- !u!1 &1074987288
 GameObject:
@@ -4644,13 +4659,13 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: de3326ba65766b144a290ba547fb3e49, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4688,7 +4703,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.2
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -10135,7 +10150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2180826005716902888, guid: 613ab47a9bbe9144fa81d08281ef9dd7, type: 3}
       propertyPath: points
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2180826005716902888, guid: 613ab47a9bbe9144fa81d08281ef9dd7, type: 3}
       propertyPath: _breakForce
@@ -10435,7 +10450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4653253302186202926, guid: 613ab47a9bbe9144fa81d08281ef9dd7, type: 3}
       propertyPath: points
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4653253302186202926, guid: 613ab47a9bbe9144fa81d08281ef9dd7, type: 3}
       propertyPath: _breakForce
@@ -10511,7 +10526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5117909897853245474, guid: 613ab47a9bbe9144fa81d08281ef9dd7, type: 3}
       propertyPath: points
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 5117909897853245474, guid: 613ab47a9bbe9144fa81d08281ef9dd7, type: 3}
       propertyPath: _breakClip
@@ -10639,7 +10654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6101801246462952845, guid: 613ab47a9bbe9144fa81d08281ef9dd7, type: 3}
       propertyPath: points
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 6101801246462952845, guid: 613ab47a9bbe9144fa81d08281ef9dd7, type: 3}
       propertyPath: _breakForce
@@ -20180,6 +20195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cans Collection 02
       objectReference: {fileID: 0}
+    - target: {fileID: 3939909348291671814, guid: ce487c8b7fa416d489de7b057a39d93a, type: 3}
+      propertyPath: sfxVolume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4247811301546829051, guid: ce487c8b7fa416d489de7b057a39d93a, type: 3}
       propertyPath: m_Mass
       value: 10
@@ -26615,7 +26634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871425211978804805}
   - component: {fileID: 69467676197046419}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TopSide_BoxCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38960,6 +38979,22 @@ PrefabInstance:
       propertyPath: m_text
       value: Timer
       objectReference: {fileID: 0}
+    - target: {fileID: 4261453006913654093, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.49019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261453006913654093, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.19607845
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261453006913654093, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261453006913654093, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.43529415
+      objectReference: {fileID: 0}
     - target: {fileID: 4392147470199682121, guid: 20db97262b903ec439f1e010bd73029d, type: 3}
       propertyPath: duration
       value: 45
@@ -39930,7 +39965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8349170992918148218}
   - component: {fileID: 3735606968013259209}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackSide_BoxCollider01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42760,7 +42795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3314883444106580061}
   - component: {fileID: 8522252116164302027}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightSide_BoxCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47648,7 +47683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3624172479144918401}
   - component: {fileID: 4965731641024118169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InSide_BoxCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65497,7 +65532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3697672528244957204}
   - component: {fileID: 8450256013355122228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FloorSide_BoxCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73304,7 +73339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 949859249701740561}
   - component: {fileID: 4250046621522736091}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightSide_BoxCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
